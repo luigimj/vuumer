@@ -1,15 +1,15 @@
-import { defineConfig } from 'vite';
-import { fileURLToPath, URL } from 'url';
+import { defineConfig } from "vite";
+import { fileURLToPath, URL } from "url";
 
 export default defineConfig({
-  root: '.',
+  root: ".",
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     emptyOutDir: true,
   },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
   server: {

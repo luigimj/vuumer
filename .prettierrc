@@ -1,0 +1,8 @@
+{
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "htmlWhitespaceSensitivity": "ignore",
+  "useTabs": false,
+  "tabWidth": 2,
+  "printWidth": 999,
+  "proseWrap": "never"
+}
