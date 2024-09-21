@@ -76,11 +76,18 @@
     </button>
   </header>
 
+  <!-- Bienvenidos -->
   <section class="relative pb-14 pt-40 lg:pt-48">
-    <!-- <div class="absolute top-0 left-0 w-full h-full">
-      <img class="absolute top-0 left-0 w-full h-full -z-10 js-lazy" data-src="/images/welcome/background.jpg" alt="" loading="lazy" />
-    </div> -->
-    <div class="mx-auto max-w-[800px] px-4 text-center text-white">
+    <div class="absolute top-0 left-0 w-full h-[75%] -z-10 welcome-custom-gradient">
+      <picture>
+        <source data-srcset="/images/welcome/bg-desktop.webp" type="image/webp" media="(min-width: 768px)">
+        <source data-srcset="/images/welcome/bg-desktop.jpg" type="image/jpg" media="(min-width: 768px)">
+        <source data-srcset="/images/welcome/bg-mobile.webp" type="image/webp">
+        <img class="js-lazy w-full h-full object-cover object-[center_top]" 
+          data-src="/images/welcome/bg-mobile.jpg" alt="" loading="lazy" />
+      </picture>
+    </div>
+    <div class="mx-auto max-w-[800px] px-4 text-center text-white mb-11 lg:mb-28">
       <!-- Title -->
       <h1 class="mb-5 text-[35px] font-extrabold leading-[45px] lg:mb-8 lg:text-6xl lg:leading-[70px]">
         Bienvenidos a la Academia Vumeer
@@ -100,8 +107,19 @@
         Empieza ahora
       </a>
     </div>
+
+    <div>
+      <picture>
+        <source data-srcset="/images/welcome/dashboard-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+        <source data-srcset="/images/welcome/dashboard-desktop.png" type="image/png" media="(min-width: 1024px)">
+        <source data-srcset="/images/welcome/dashboard-mobile.webp" type="image/webp">
+        <img class="js-lazy w-full h-full object-cover object-[center_top]" 
+          data-src="/images/welcome/dashboard-mobile.png" alt="" loading="lazy" />
+      </picture>
+    </div>
   </section>
 
+  <!-- Cómo vender -->
   <section class="pb-14 pt-12 lg:pt-16">
     <div class="mx-auto max-w-[1208px] px-4">
       <!-- Title -->
@@ -179,16 +197,15 @@
         <div class="relative flex rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
           <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-[13px] pb-[30px] pt-10 text-center text-white lg:pb-[58px] lg:pt-[52px] lg:flex lg:flex-col xl:px-9">
             <div class="mb-6 text-center lg:mb-[44px]">
-              <svg class="inline-block" width="92" height="92" viewBox="0 0 92 92" fill="none"
+              <svg class="inline-block" width="92" height="92" viewBox="0 0 92 92" fill="none" 
                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <circle cx="46" cy="46" r="46" fill="#009D3D" />
-                <rect x="19" y="20" width="53" height="52" fill="url(#pattern0_2058_2)" />
+                <rect x="19" y="20" width="53" height="52" fill="url(#pattern0_2058_1138)" />
                 <defs>
-                  <pattern id="pattern0_2058_2" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_2058_2" transform="matrix(0.00740741 0 0 0.00754986 0 -0.00584046)" />
+                  <pattern id="pattern0_2058_1138" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_2058_1138" transform="matrix(0.00748204 0 0 0.00746269 -0.00129647 0)"/>
                   </pattern>
-                  <image id="image0_2058_2" width="135" height="134"
-                    xlink:href="data:image/png;base64,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" />
+                  <image id="image0_2058_1138" width="134" height="134" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAACGCAYAAAAYefKRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAxkSURBVHgB7Z3hddu6DoCRnvu/2aC8E9Sd4CkT1JmgzgRNJ4gzQZIJ7EyQdgKrE9x0AqsT1J0AjzChVlFAWbREiZT5ncMmpRjakiAQJEDoDAYAETP945Mu9FNx9bMuuS4PZ2dnBUSIPi8F5pze63Kuy4x/lmUMdmCu7aMueZDXli6cLhts5pcu1xAB+nue67LQZcXfO3S2uiwgJNAIxdbhJG4gQNAIwxwPC3jIhPPg4XEXcg6BgEYgbjAOzdCGDMYGjbo9hi2MDE5PIEo2LtfhDDqARgo/gjEoydgiw+c712XCnzyAMTip7Q38NUSrfNHlXaXPoSkNyLbQORdgDL6f/PuOyxgosF/bD9oYfQZfYDujss6q1gc9mbE+lRtdlhiCehZAc3+ka9va1vgHHNGd0xNFasn1aX6s/kdL7k739Q3MNDYGSAOQxrun7w4BQ1NUfW0LMNqvSut75iQYaObtT3Ccih/dfjiSXJdbfbFziItOwuuqMWxj1xTJIU6BoAf4M8g2Xmv74h9LxzPu+LzSIUngwtLPAx8no3MG3aG+HvknDTVKaFNAbXjqkTxkgUAzrbddZ1qFtU37j9MiZEyhu1GZ1fq4t7R7J3ze2tJ2Vmv3JLT5BSeIPu877MYKjUnQ+gM/ozsboR9ladtWMKQ+s7Z9Thk0M7k+2GLt4avzhj9woX/cQxgULetOkb7WdZQuG2zQHG/4YJB+isRL2FOaQz+QkK1sB8n4zEA27soVvR3IFm5iHC51oYWq/4EbmVRHw7RkaJNgSAtMhS4XpS8fzYrZHSRGhxfXluAImkmC5C+hGUxeryQbQzJCbqsBHvp3sj++QiJaWCs8CIeU1J4EQzJoCqHuByRiR1rHeCs1fAOJU+KjUPdbaujsREuEAa1pgNv0lZbJJbMhlxonwYgMXpgiR6aCfvio+9xpG2RdrUxDSXz0KRREpssKjStElZU+BCPoWIWY4RunwA8ZVFZDXQRDctl+r1fwPLuoVRe6/uexfSb+4DtkUEG5GmpxsmTSX+FLz+mGDSCp3Qz/bh34hQ17G+p9Wtq0dsxNHTSB1lv0S3ZG/wqff2GLR0C2htvscEKjlnaHQuEO9cn9SBFgyqKJJg+6uM5lFJj4Gmnle+2kMcYCk8bwBsrxM9s0K0nkQp1KgpEQ7cQkGCcM23ZSLM5zWvmMEDRhEO+hO+RylzTG9yQYkaGFguJiWu8oO5L7NJREBKt+30Kxj8VJghEXfQUD2yChWNIvSTAioudg4CqFLpelUBCx2xiU6eY39E+YuatgLxwXaFwMLsHACuwB3V84dPMlka98+mRSWyrQ+K+k1AjifqI0lNhZYnd/RDBwwhRpr6+S2ifBaGYF02JawcAeja5D0IYc39PDIWmdpCYm4/MKzEabqtGlhHZdglmUUHejhSPvO3fVwMOUAhMMrFr/hcXwyiACUA5YWcCRoD2FAxltM+gBPC5/mU/E4KhkY7xkCfJmK1pY2mA/WXZptpNB4CTBqMCRZrRpWBqK9rvD0TXxyGsyiIAkGDXYlrhqaLIAoz1ucELT2TpJMAS0cNAG7ibhUGCGnS2aNFAUoNuLDeIRKXrfSnK7W6CdWfpmk/Y4tMFnzoUMS/pxaFakhDrKhuw1mwDn/lxCyyQ5JBh0EnWvnW8vXhTQsKIv5gUY7dB2DcB1TymxC803Q0OJzdCKAel79rohh26YLgswQ0sBJ4JNMBTEgXfBKKGhRZd/4UQEhARDSogS/H6NBmPPi2CUVATkgy63MM5SvXdKG6NO6BY2IX5Hr69deP05fz6LBfUcDtsYdxDBUE2CIV1IBeEjZYfJYSTaCiSaOI/gBYOGklyopwy0GQQKLyzNhUNpp3xPvOFpkjScZBAutqmj17WAU6Jc+cyFY64JRgeBtcVCOFQMZV+cAqVgSCqYglRCHAtt70y5hURvlIKxthy/hoBgt/dCOFTUk4slurEXDHY358LxzxAIPB20pa1O2qJnqt5VKZ1wELMTbH5B3zppi/6pCkYO8uxk1P0VaN7vZROKApK28MIfweDhRNIa2RhaAzk2EswLdmxG8GWoO8Zipx6oQzdhdK3Bq4OUjC1raHaVpqf+eCEYIWgNXqdYNjTZx2Umu8IvUmifTWtkMAxZw7ECTKrJtMLpmVeCwVojRBVNmuxDGj6GIZaYT1rACmqxzRX8mwhNQQSkYOABwP5fJdEnlB7hvJ69OW0f8Aya123TtFs1NMthGHKhTszrlQTDI1ooKDyANEWTM/J2qLUYzg+fC4c+1x2mSTA8wcPHuqFJrsu/1bxXAyGtFL/SGkkwPMBrMU+WwzSWU96rizFWbdtqjSQYfrDNPgow6zD3MC42rZGV/0mC0TMNMSOkKS5CWIdhrSEtYv4Js0iC0T82v9JVYA4/m+tjP5wkwegR1hZKOPQQ4DK+bTjbR98nwegXSVsUYL8Jo9EQtbcPAk+C0RM8PVXCodvAhpAqUhB40hg9M7fU5xAuuVBH4ZzvkmD0h7QP51vIEWYNs5OLWJxo5wcy5pVZbHYjTgczoS6GuJECXm8Qn0UjGNAyfTOnO8rBjJ9fhxCUhpQMMcSOUBqM+vd/O9WhJAMzQ/gPTZLYBfhFdJJFElRUCHXZKdgYCkx+Tp8CMlhmHw8UQt1JvXdVQT8JXCViFgzxezrbGOg/6elbS30Bdg5lsamyALP0e5niR/d0FoxPvCus7Q3ok4LzXjXCRiAVyrYzb2iqwNgfC93vIyRe4TKUKAg8RRBpAE6eRvnA22TYW3PoXaLGZG0Mzs+51r9SAteHhqarCNI9D04sgpHDkbCAXEPzWwWeAk0SMxoxCEYOPexoZ7c35eYshMMKRt7VHxqusxK6uKSWCxiIPn0NnGidNIeUVuG6g70haRvarb+t/D+HsD2th0H51UxbmAj6XK5xHDYQGPo7ZdIXdRlKJjOt42DcHIaHbkLw6bgJm2DYjLQpcQUJKzbB+CnUfcIJTet4rE9pmizYjE/JniCNQauFObgZn99DTXJCu8D0+azBT+4Pul53MAX0RZqj/C7TyRldvkGTQ0wiKBsDDxmfaPJe+dqqH43RlTDsBQONc2wJfvkNiWh4g4eTofXBQz0xRyJsyPgkP4It0KSPYNYfAWziTThCgiGFvRdgEqGlp/xEIRtDWpu4TUJx2risfCZOCBKMQqgP8u1GieEgG4M25qhaPXkfySAlx1kBHYjazTwwPEPcHRrG+d6ct7m2bfuU/jBDv2zRZK87KdBx5RNfhjrcNfT7SZdflWs7s7Q7b9MnWu6/9KV8QCdyUqFz6CAYum4htLu29Luttdta2i2FPudCu8Ylcd/vKyeheAsJG5lQ975egWZYULVqBTKSndjaO16+E60AE02dgx8oIPcnJKKh+oYjunkkHKQ9cuiPAkyEdiIiXsVjUOwE2wOZ0J4Cge/TTGP62AJ1pPHpOfZXQyTaY1v5lGYQ3yBxMpxyMPAp8l6oU0LdziUYmJKQZ5CImXl1fYSnv9IOvGebjUFxGNLruzdogoFdyCEF6oTEnb6HlCaCRgAF8kjwKAoGpfljAciEw1JdExmXC0iEQtZwrNAlb9qJRusZfT3lKRg4Hvb7a62CUVkNLaAfUjCwQcoM1Omh6fGh+9J6DxA7g9bYjZOM+cS/XtAqT7U2M8s1Wwn92Rxzd7V2rh7zDdYmFmfQ/iQzMOkDJMhY/WE59hzbm5X5XMnh1HWKTuEGSqgvwMS6kGNxYfkcShl1VfteCuRdgsQzmLUm6tO2EHnBn1U60/ZvIOiUpA7NLjWJyayG8pO2wTBw0RhH9deES+IUyWWbT2FrABoNQfP5DKZJAY4buLvmEo92NRSNo3ABJvVjBnGgwB0aLi69OT5RzkJDxpWCSGBVTOexQdkwDIlXUW9oshq7sMEj74+L8UlDyX/CoQKMmioa/rw4JLF8AjQOZtzXwcy9KEc0lVA9XViaypWJYV01HH2+zxVb6pvcDwXIKROo/pbbkcdbsuf2b1ng4+eVPr/y+0j8g90Ms2vHvhvjRI94elxY4cCaEI9PP7GAscHuEeVNN1ois7SdY/+QIN7jSEPjkecUTt4R7JbxLmvodyO0V5a2S+yPDZpzGt2QdjyvLYZm36EJd9+iG1ts1hgzfNnndUPbLpqLNMMGjTAoCAz+XocM402I330PGgt/ge0sfMrd1Sp0Hc1NP/j0onm6tg2fueXPpXTQ9/xdW4fPjwlf23v+/tXzWeFAMTH/Bxo1JtXVn/pdAAAAAElFTkSuQmCC"/>
                 </defs>
               </svg>
             </div>
@@ -245,6 +262,7 @@
     </div>
   </section>
 
+  <!-- Qué ofrecemos -->
   <section class="pb-14 pt-12 lg:pt-16">
     <div class="mx-auto max-w-[1208px] px-4">
       <!-- Title -->
@@ -252,9 +270,9 @@
         ¿Qué ofrecemos?
       </h2>
 
-      <div class="grid gap-x-5 gap-y-6 lg:grid-cols-2 lg:gap-4">
+      <div class="grid gap-x-5 gap-y-6 md:grid-cols-2 md:gap-4">
         <div class="relative flex rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
-          <div class="lg:flex lg:flex-col rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-5 py-5 text-center text-white lg:py-[37px] xl:px-[45px]">
+          <div class="md:flex md:flex-col rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-5 py-5 text-center text-white lg:py-[37px] xl:px-[45px]">
             <h3 class="text-lg font-bold leading-[58px] lg:text-3xl lg:text-left lg:mb-[11px]">
               Clases 100% online
             </h3>
@@ -264,12 +282,18 @@
               se ajuste a tus necesidades, desde básico hasta avanzado
             </p>
 
-            <img class="js-lazy rounded-[20px] d-block w-full h-auto lg:mt-auto" data-src="/images/offers/clases-online.jpg" alt="" loading="lazy" />
+            <picture class="md:mt-auto">
+              <source data-srcset="/images/offers/clases-online-desktop.webp" type="image/webp" media="(min-width: 768px)">
+              <source data-srcset="/images/offers/clases-online-desktop.png" type="image/png" media="(min-width: 768px)">
+              <source data-srcset="/images/offers/clases-online-mobile.webp" type="image/webp">
+              <img class="js-lazy rounded-[20px] w-full h-auto" 
+                data-src="/images/offers/clases-online-mobile.png" alt="" loading="lazy" />
+            </picture>
           </div>
         </div>
 
         <div class="relative flex rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
-          <div class="lg:flex lg:flex-col rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-5 py-5 text-center text-white lg:py-[37px] xl:px-[45px]">
+          <div class="md:flex md:flex-col rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-5 py-5 text-center text-white lg:py-[37px] xl:px-[45px]">
             <h3 class="text-lg font-bold leading-[58px] lg:text-3xl lg:text-left lg:mb-[11px]">
               Clases en vivo
             </h3>
@@ -279,12 +303,18 @@
               tiempo real.
             </p>
 
-            <img class="js-lazy rounded-[20px] d-block w-full h-auto lg:mt-auto" data-src="/images/offers/clases-en-vivo.jpg" alt="" loading="lazy" />
+            <picture class="md:mt-auto">
+              <source data-srcset="/images/offers/clases-en-vivo-desktop.webp" type="image/webp" media="(min-width: 768px)">
+              <source data-srcset="/images/offers/clases-en-vivo-desktop.png" type="image/png" media="(min-width: 768px)">
+              <source data-srcset="/images/offers/clases-en-vivo-mobile.webp" type="image/webp">
+              <img class="js-lazy rounded-[20px] w-full h-auto" 
+                data-src="/images/offers/clases-en-vivo-mobile.png" alt="" loading="lazy" />
+            </picture>
           </div>
         </div>
 
         <div class="relative flex rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
-          <div class="lg:flex lg:flex-col rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-5 py-5 text-center text-white lg:py-[37px] xl:px-[45px]">
+          <div class="md:flex md:flex-col rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-5 py-5 text-center text-white lg:py-[37px] xl:px-[45px]">
             <h3 class="text-lg font-bold leading-[58px] lg:text-3xl lg:text-left lg:mb-[11px]">
               Bono exclusivo
             </h3>
@@ -295,12 +325,18 @@
               (Courier) de confianza.
             </p>
 
-            <img class="js-lazy rounded-[20px] d-block w-full h-auto lg:mt-auto" data-src="/images/offers/bono-exclusivo.jpg" alt="" loading="lazy" />
+            <picture class="md:mt-auto">
+              <source data-srcset="/images/offers/bono-exclusivo-desktop.webp" type="image/webp" media="(min-width: 768px)">
+              <source data-srcset="/images/offers/bono-exclusivo-desktop.png" type="image/png" media="(min-width: 768px)">
+              <source data-srcset="/images/offers/bono-exclusivo-mobile.webp" type="image/webp">
+              <img class="js-lazy rounded-[20px] w-full h-auto" 
+                data-src="/images/offers/bono-exclusivo-mobile.png" alt="" loading="lazy" />
+            </picture>
           </div>
         </div>
 
         <div class="relative flex rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
-          <div class="lg:flex lg:flex-col rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-5 py-5 text-center text-white lg:py-[37px] xl:px-[45px]">
+          <div class="md:flex md:flex-col rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-5 py-5 text-center text-white lg:py-[37px] xl:px-[45px]">
             <h3 class="text-lg font-bold leading-[58px] lg:text-3xl lg:text-left lg:mb-[11px]">
               Fuente de ingreso extra
             </h3>
@@ -310,14 +346,31 @@
               información con nuestro equipo de soporte.
             </p>
 
-            <img class="js-lazy rounded-[20px] d-block w-full h-auto lg:mt-auto" data-src="/images/offers/ingreso-extra.jpg" alt="" loading="lazy" />
+            <picture class="md:mt-auto">
+              <source data-srcset="/images/offers/ingreso-extra-desktop.webp" type="image/webp" media="(min-width: 768px)">
+              <source data-srcset="/images/offers/ingreso-extra-desktop.png" type="image/png" media="(min-width: 768px)">
+              <source data-srcset="/images/offers/ingreso-extra-mobile.webp" type="image/webp">
+              <img class="js-lazy rounded-[20px] w-full h-auto" 
+                data-src="/images/offers/ingreso-extra-mobile.png" alt="" loading="lazy" />
+            </picture>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="pb-16 pt-12 lg:pt-16 lg:pb-20">
+  <!-- Transforma tu negocio -->
+  <section class="relative pb-16 pt-12 lg:pt-24 lg:pb-40">
+    <div class="absolute top-0 left-0 w-full h-full -z-10 transform-custom-gradient">
+      <picture>
+        <source data-srcset="/images/transform-your-business/bg-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+        <source data-srcset="/images/transform-your-business/bg-desktop.jpg" type="image/jpg" media="(min-width: 1024px)">
+        <source data-srcset="/images/transform-your-business/bg-mobile.webp" type="image/webp">
+        <img class="js-lazy w-full h-full object-cover" 
+          data-src="/images/transform-your-business/bg-mobile.jpg" alt="" loading="lazy" />
+      </picture>
+    </div>
+
     <div class="mx-auto max-w-[800px] px-4 text-center">
       <!-- Title -->
       <h2 class="mb-[30px] text-[35px] font-bold leading-[45px] text-white lg:text-6xl lg:leading-[70px] lg:mb-[34px]">
@@ -342,6 +395,7 @@
     </div>
   </section>
 
+  <!-- Nuestros paquetes -->
   <section class="pb-14 pt-12 lg:pt-16">
     <div class="mx-auto max-w-[1208px] px-4">
       <!-- Title -->
@@ -349,7 +403,7 @@
         Nuestros paquetes
       </h2>
 
-      <div class="grid gap-x-5 gap-y-6 lg:grid-cols-3 lg:gap-4">
+      <div class="grid gap-x-5 gap-y-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-4">
         <div class="relative rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
           <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-5 pb-10 pt-6 text-center text-white lg:pt-[42px] lg:pb-[67px]">
             <h3 class="text-[35px] font-medium leading-[70px]">
@@ -464,233 +518,357 @@
     </div>
   </section>
 
-  <section class="pb-14 pt-12">
-    <div class="mx-auto max-w-[1208px] px-4 text-center">
+  <!-- Carta del CEO -->
+  <section class="pb-14 pt-12 lg:pb-24">
+    <div class="mx-auto max-w-[1208px] px-4 text-center lg:text-left lg:grid-template-custom">
       <!-- Title -->
-      <h2 class="mb-2 text-[34px] font-bold leading-[45px] text-white">
-        Carta del CEO & Fundador
-      </h2>
-      <h3 class="mb-2 text-xl font-light leading-[29px] text-white">
-        Lord Dennis
-      </h3>
-
-      <div class="custom-gradient relative mb-5">
-        <img class="js-lazy mx-auto" data-src="/images/mentors/lord-dennis.png" alt="" loading="lazy" />
+      <div class="lg:grid-area-left">
+        <h2 class="mb-2 text-[34px] font-bold leading-[45px] text-white lg:text-[50px] lg:leading-[70px]">
+          Carta del CEO & Fundador
+        </h2>
+        <h3 class="mb-2 text-xl font-light lg:text-[30px] leading-[29px] lg:mb-10 text-white">
+          Lord Dennis
+        </h3>
       </div>
 
-      <div class="mb-[30px]">
-        <p class="text-base font-normal leading-[26px] text-white">
-          La empresa fue creada para ayudar a quienes desean aprender sobre
-          comercio electrónico. En la Academia Vumeer, enseñamos de manera
-          clara cómo crear una tienda virtual y hacer publicidad, con la
-          ventaja de aprender en poco tiempo.
-        </p>
-        <p class="text-base font-normal leading-[26px] text-white">
-          Si buscas emprender, en Vumeer encontrarás una comunidad dispuesta a
-          apoyarte. Ofrecemos el soporte necesario para guiarte paso a paso y
-          evitar errores en el proceso.
-        </p>
+      <div class="custom-gradient relative mb-5 lg:mb-0 lg:grid-area-right">
+        <picture>
+          <source data-srcset="/images/mentors/lord-dennis-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+          <source data-srcset="/images/mentors/lord-dennis-desktop.png" type="image/png" media="(min-width: 1024px)">
+          <source data-srcset="/images/mentors/lord-dennis-mobile.webp" type="image/webp">
+          <img class="js-lazy mx-auto" 
+            data-src="/images/mentors/lord-dennis-mobile.png" alt="" loading="lazy" />
+        </picture>
       </div>
 
-      <!-- Call to Action Button -->
-      <a href="#"
-        class="inline-flex min-h-[53px] min-w-[266px] items-center justify-center rounded-[39px] bg-[rgba(236,103,7,1)] px-7 py-3 text-xl font-bold leading-6 text-white hover:bg-[rgba(236,103,7,0.8)]">
-        Únete a la academia
-      </a>
+      <div class="lg:grid-area-bottom">
+        <div class="mb-[30px] lg:mb-[68px] lg:max-w-[596px]">
+          <p class="text-base lg:text-[19px] lg:leading-[29px] font-normal leading-[26px] text-white lg:mb-5">
+            La empresa fue creada para ayudar a quienes desean aprender sobre
+            comercio electrónico. En la Academia Vumeer, enseñamos de manera
+            clara cómo crear una tienda virtual y hacer publicidad, con la
+            ventaja de aprender en poco tiempo.
+          </p>
+          <p class="text-base font-normal leading-[26px] lg:text-[19px] lg:leading-[29px] text-white">
+            Si buscas emprender, en Vumeer encontrarás una comunidad dispuesta a
+            apoyarte. Ofrecemos el soporte necesario para guiarte paso a paso y
+            evitar errores en el proceso.
+          </p>
+        </div>
+
+        <!-- Call to Action Button -->
+        <a href="#"
+          class="inline-flex min-h-[53px] min-w-[266px] lg:min-h-[57px] lg:min-w-[392px] items-center justify-center rounded-[39px] bg-[rgba(236,103,7,1)] px-7 py-3 text-xl lg:text-[28px] font-bold leading-6 lg:leading-[34px] text-white hover:bg-[rgba(236,103,7,0.8)]">
+          Únete a la academia
+        </a>
+      </div>
     </div>
   </section>
 
+  <!-- Nuestros mentores -->
   <section class="pb-14 pt-12">
     <div class="mx-auto max-w-[1208px] px-4">
       <!-- Title -->
-      <h2 class="mb-[50px] text-center text-[34px] font-bold leading-[45px] text-white">
+      <h2 class="mb-[50px] text-center text-[34px] font-bold leading-[45px] text-white lg:text-6xl lg:leading-[70px] lg:mb-[60px]">
         Nuestros mentores
       </h2>
 
-      <div>
-        <div class="custom-gradient relative mb-5">
-          <img class="js-lazy mx-auto" data-src="/images/mentors/omar-sanchez.png" alt="" loading="lazy" />
+      <div class="lg:grid lg:grid-cols-2 lg:items-center">
+        <div class="custom-gradient relative mb-5 lg:mb-0 lg:order-2">
+          <picture>
+            <source data-srcset="/images/mentors/omar-sanchez-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+            <source data-srcset="/images/mentors/omar-sanchez-desktop.png" type="image/png" media="(min-width: 1024px)">
+            <source data-srcset="/images/mentors/omar-sanchez-mobile.webp" type="image/webp">
+            <img class="js-lazy mx-auto" 
+              data-src="/images/mentors/omar-sanchez-mobile.png" alt="" loading="lazy" />
+          </picture>
         </div>
-        <h3 class="mb-4 text-center text-3xl font-medium leading-[46px] text-white">
-          Omar Sánchez
-        </h3>
-        <p class="text-center text-base font-normal leading-[26px] text-white">
-          Lo que más me impactó fue aprender cómo crear y gestionar una tienda
-          online desde cero. Hoy, no solo comprendo las estrategias de
-          marketing digital, sino que también tengo las herramientas para
-          implementar un ecommerce que genere ingresos reales. Estoy
-          convencida de que este conocimiento me ha abierto muchas puertas, y
-          estoy emocionada por lo que vendrá.
-        </p>
+        <div class="text-center lg:text-left text-white lg:order-1">
+          <h3 class="mb-4 text-3xl font-medium leading-[46px] lg:text-7xl lg:mb-7 lg:leading-[46px]">
+            Omar Sánchez
+          </h3>
+          <span class="hidden lg:block text-[35px] leading-[46px] mb-10">
+            Experto en e-commerce
+          </span>
+
+          <p class="text-base font-normal leading-[26px] lg:text-[19px] lg:leading-[29px] lg:max-w-[596px]">
+            Un experto en e-commerce con más de 10 años de experiencia en la 
+            industria digital. Ha trabajado como consultor para empresas de 
+            diferentes tamaños, ayudándolas a desarrollar tiendas en línea 
+            exitosas y optimizar sus estrategias de venta. Especializado en 
+            plataformas como Shopify y WooCommerce, Omar ha asesorado a 
+            emprendedores en áreas clave como la optimización de conversiones, 
+            automatización del marketing y gestión de inventarios. 
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="pb-14 pt-12">
+  <!-- Testimonios -->
+  <section class="pb-14 pt-12" aria-labelledby="testimonials-heading">
     <div class="mx-auto max-w-[1208px] px-4">
       <!-- Title -->
-      <h2 class="mb-[50px] text-center text-[34px] font-bold leading-[45px] text-white">
+      <h2 id="testimonials-heading" class="mb-[50px] text-center text-[34px] font-bold leading-[45px] text-white lg:text-6xl lg:leading-[70px] lg:mb-[42px]">
         Testimonios
       </h2>
 
-      <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
-        <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-4 py-5">
-          <img class="js-lazy mb-5 rounded-[20px]" data-src="/images/testimonials/1.jpg" alt="" loading="lazy" />
+      <article class="relative mb-6 lg:mb-0 xl:mb-[23px] rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
+        <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-4 py-5 lg:px-[47px] lg:py-8 lg:grid lg:grid-cols-2 lg:gap-x-14 xl:grid-cols-[auto_auto]">
+          <picture>
+            <source data-srcset="/images/testimonials/1-desktop.webp" type="image/webp" media="(min-width: 768px)">
+            <source data-srcset="/images/testimonials/1-desktop.png" type="image/png" media="(min-width: 768px)">
+            <source data-srcset="/images/testimonials/1-mobile.webp" type="image/webp">
+            <img class="js-lazy w-full mb-5 rounded-[20px] lg:mb-0 xl:h-[394px] xl:w-auto xl:max-w-[455px]" 
+              data-src="/images/testimonials/1-mobile.png" alt="" loading="lazy" />
+          </picture>
           
-          <p class="mb-8 text-center text-[15px] font-normal leading-[25px] text-white">
-            Lo que más me impactó fue aprender cómo crear y gestionar una
-            tienda online desde cero. Hoy, no solo comprendo las estrategias
-            de marketing digital, sino que también tengo las herramientas para
-            implementar un ecommerce que genere ingresos reales. Estoy
-            convencida de que este conocimiento me ha abierto muchas puertas,
-            y estoy emocionada por lo que vendrá.
-          </p>
-          
-          <div class="text-right text-[15px] font-semibold leading-[25px] text-white">
-            Ana Torres - Empresaria
+          <div class="xl:pt-[38px]">
+            <blockquote class="mb-8">
+              <p class="text-center text-[15px] font-normal leading-[25px] text-white lg:text-left xl:mb-[78px] xl:text-lg xl:leading-[29px]">
+                Lo que más me impactó fue aprender cómo crear y gestionar una
+                tienda online desde cero. Hoy, no solo comprendo las estrategias
+                de marketing digital, sino que también tengo las herramientas para
+                implementar un ecommerce que genere ingresos reales. Estoy
+                convencida de que este conocimiento me ha abierto muchas puertas,
+                y estoy emocionada por lo que vendrá.
+              </p>
+            </blockquote>
+            
+            <footer>
+              <p class="text-right text-[15px] font-semibold leading-[25px] text-white lg:text-left xl:text-[25px] xl:leading-[70px]">
+                <strong class="font-semibold">Ana Torres</strong> - Empresaria
+              </p>
+            </footer>
           </div>
         </div>
+      </article>
+
+      <div class="hidden xl:grid xl:grid-cols-3 xl:gap-4">
+        <article class="relative rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
+          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-[28px] py-14 text-left text-white">
+
+            <blockquote class="mb-8">
+              <p class="text-base font-normal leading-[29px]">
+                Entrar a la academia de ecommerce fue una de las mejores 
+                decisiones que tomé. Siempre quise aprender cómo vender 
+                productos en línea, y aquí me dieron todas las herramientas 
+                para lograrlo.
+              </p>
+            </blockquote>
+
+            <footer class="grid grid-cols-[78px_auto] gap-x-6 items-center">
+              <picture>
+                <source data-srcset="/images/testimonials/2.webp" type="image/webp">
+                <img class="js-lazy rounded-full" 
+                  data-src="/images/testimonials/2.png" alt="" loading="lazy" 
+                  width="78" height="78" />
+              </picture>
+              <p class="text-xl leading-[30px] font-semibold">
+                <strong class="font-semibold">Miguel Hidalgo</strong> <br> CEO                
+              </p>
+            </footer>
+
+          </div>
+        </article>
+
+        <article class="relative rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
+          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-[28px] py-14 text-left text-white">
+
+            <blockquote class="mb-8">
+              <p class="text-base font-normal leading-[29px]">
+                Entrar a la academia de ecommerce fue una de las mejores 
+                decisiones que tomé. Siempre quise aprender cómo vender 
+                productos en línea, y aquí me dieron todas las herramientas 
+                para lograrlo.
+              </p>
+            </blockquote>
+
+            <footer class="grid grid-cols-[78px_auto] gap-x-6 items-center">
+              <picture>
+                <source data-srcset="/images/testimonials/3.webp" type="image/webp">
+                <img class="js-lazy rounded-full" 
+                  data-src="/images/testimonials/3.png" alt="" loading="lazy" 
+                  width="78" height="78" />
+              </picture>
+              <p class="text-xl leading-[30px] font-semibold">
+                <strong class="font-semibold">Valeria Velazques</strong> <br> CEO                
+              </p>
+            </footer>
+
+          </div>
+        </article>
+
+        <article class="relative rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
+          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-[28px] py-14 text-left text-white">
+
+            <blockquote class="mb-8">
+              <p class="text-base font-normal leading-[29px]">
+                Entrar a la academia de ecommerce fue una de las mejores 
+                decisiones que tomé. Siempre quise aprender cómo vender 
+                productos en línea, y aquí me dieron todas las herramientas 
+                para lograrlo.
+              </p>
+            </blockquote>
+
+            <footer class="grid grid-cols-[78px_auto] gap-x-6 items-center">
+              <picture>
+                <source data-srcset="/images/testimonials/4.webp" type="image/webp">
+                <img class="js-lazy rounded-full" 
+                  data-src="/images/testimonials/4.png" alt="" loading="lazy" 
+                  width="78" height="78" />
+              </picture>
+              <p class="text-xl leading-[30px] font-semibold">
+                <strong class="font-semibold">Luis Gonzales</strong> <br> CEO                
+              </p>
+            </footer>
+
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="pt-12">
-    <div class="mx-auto max-w-[1208px] px-4">
+  <!-- Preguntas frecuentes -->
+  <section class="pt-12 xl:pb-36">
+    <div class="mx-auto max-w-[1208px] px-4 lg:grid lg:items-baseline lg:grid-cols-[1fr_3fr] lg:gap-x-[80px] xl:gap-x-[120px]">
       <!-- Title -->
-      <h2 class="mb-[50px] text-center text-[34px] font-bold leading-[45px] text-white">
+      <h2 class="mb-[50px] text-center text-[34px] font-bold leading-[45px] text-white lg:text-6xl lg:leading-[70px] lg:text-left lg:mb-0">
         Preguntas Frecuentes
       </h2>
 
-      <!-- Collapsible Item 1 -->
-      <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
-        <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
-          <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[23px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none"
-            data-collapse-id="collapse1">
-            <span class="max-w-[282px]">
-              ¿Para qué tipo de negocio recomiendas el uso de Vumeer?
-            </span>
-            <svg class="rotate-0 transform transition-transform" id="icon-collapse1" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
-            </svg>
-          </button>
-          
-          <div id="collapse1" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-            <p class="p-4 pt-0 text-xs text-white">
-              Tailwind CSS es un framework de CSS basado en utilidades que
-              permite crear diseños rápidamente sin tener que escribir CSS
-              personalizado.
-            </p>
+      <div>
+        <!-- Collapsible Item 1 -->
+        <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
+          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
+            <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[23px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none xl:text-[22px] xl:leading-8 xl:py-[9px]"
+              data-collapse-id="collapse1">
+              <span class="max-w-[282px] xl:max-w-[494px]">
+                ¿Para qué tipo de negocio recomiendas el uso de Vumeer?
+              </span>
+              <svg class="rotate-0 transform transition-transform" id="icon-collapse1" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
+              </svg>
+            </button>
+            
+            <div id="collapse1" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+              <p class="p-4 pt-0 text-xs text-white">
+                Tailwind CSS es un framework de CSS basado en utilidades que
+                permite crear diseños rápidamente sin tener que escribir CSS
+                personalizado.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Collapsible Item 2 -->
-      <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
-        <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
-          <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[13px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none"
-            data-collapse-id="collapse2">
-            <span class="max-w-[282px]">
-              ¿Cómo puedo usar Vumeer para campañas de mensajes de Whatsapp?
-            </span>
-            <svg class="rotate-0 transform transition-transform" id="icon-collapse2" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
-            </svg>
-          </button>
-          
-          <div id="collapse2" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-            <p class="p-4 pt-0 text-xs text-white">
-              Vite es una herramienta de construcción rápida y moderna que
-              mejora la experiencia de desarrollo de proyectos frontend.
-            </p>
+        <!-- Collapsible Item 2 -->
+        <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
+          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
+            <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[13px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none xl:text-[22px] xl:leading-8 xl:py-[9px]"
+              data-collapse-id="collapse2">
+              <span class="max-w-[282px] xl:max-w-[494px]">
+                ¿Cómo puedo usar Vumeer para campañas de mensajes de Whatsapp?
+              </span>
+              <svg class="rotate-0 transform transition-transform" id="icon-collapse2" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
+              </svg>
+            </button>
+            
+            <div id="collapse2" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+              <p class="p-4 pt-0 text-xs text-white">
+                Vite es una herramienta de construcción rápida y moderna que
+                mejora la experiencia de desarrollo de proyectos frontend.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Collapsible Item 3 -->
-      <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
-        <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
-          <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[23px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none"
-            data-collapse-id="collapse3">
-            <span class="max-w-[282px]">
-              ¿Cuáles on los pasos para empezar a usar Vumeer al 100%?
-            </span>
-            <svg class="rotate-0 transform transition-transform" id="icon-collapse3" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
-            </svg>
-          </button>
-          
-          <div id="collapse3" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-            <p class="p-4 pt-0 text-xs text-white">
-              Tailwind CSS te permite tener control total sobre el diseño, sin
-              limitaciones de clases predefinidas, y facilita la creación de
-              componentes personalizados.
-            </p>
+        <!-- Collapsible Item 3 -->
+        <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
+          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
+            <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[23px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none xl:text-[22px] xl:leading-8 xl:py-[9px]"
+              data-collapse-id="collapse3">
+              <span class="max-w-[282px] xl:max-w-[494px]">
+                ¿Cuáles on los pasos para empezar a usar Vumeer al 100%?
+              </span>
+              <svg class="rotate-0 transform transition-transform" id="icon-collapse3" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
+              </svg>
+            </button>
+            
+            <div id="collapse3" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+              <p class="p-4 pt-0 text-xs text-white">
+                Tailwind CSS te permite tener control total sobre el diseño, sin
+                limitaciones de clases predefinidas, y facilita la creación de
+                componentes personalizados.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Collapsible Item 4 -->
-      <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
-        <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
-          <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[13px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none"
-            data-collapse-id="collapse4">
-            <span class="max-w-[282px]">
-              ¿Los mensajes enviados por Whatsapp también estarán visibles en Vumeer?</span>
-            <svg class="rotate-0 transform transition-transform" id="icon-collapse4" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
-            </svg>
-          </button>
-          
-          <div id="collapse4" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-            <p class="p-4 pt-0 text-xs text-white">
-              Tailwind CSS te permite tener control total sobre el diseño, sin
-              limitaciones de clases predefinidas, y facilita la creación de
-              componentes personalizados.
-            </p>
+        <!-- Collapsible Item 4 -->
+        <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
+          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
+            <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[13px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none xl:text-[22px] xl:leading-8 xl:py-[9px]"
+              data-collapse-id="collapse4">
+              <span class="max-w-[282px] xl:max-w-[494px]">
+                ¿Los mensajes enviados por Whatsapp también estarán visibles en Vumeer?</span>
+              <svg class="rotate-0 transform transition-transform" id="icon-collapse4" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
+              </svg>
+            </button>
+            
+            <div id="collapse4" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+              <p class="p-4 pt-0 text-xs text-white">
+                Tailwind CSS te permite tener control total sobre el diseño, sin
+                limitaciones de clases predefinidas, y facilita la creación de
+                componentes personalizados.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Collapsible Item 5 -->
-      <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
-        <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
-          <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[33px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none"
-            data-collapse-id="collapse5">
-            <span class="max-w-[282px]">¿Cómo se paga en Vumeer? </span>
-            <svg class="rotate-0 transform transition-transform" id="icon-collapse5" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
-            </svg>
-          </button>
-          
-          <div id="collapse5" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-            <p class="p-4 pt-0 text-xs text-white">
-              Tailwind CSS te permite tener control total sobre el diseño, sin
-              limitaciones de clases predefinidas, y facilita la creación de
-              componentes personalizados.
-            </p>
+        <!-- Collapsible Item 5 -->
+        <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
+          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
+            <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[33px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none xl:text-[22px] xl:leading-8 xl:py-[25px]"
+              data-collapse-id="collapse5">
+              <span class="max-w-[282px] xl:max-w-[494px]">¿Cómo se paga en Vumeer? </span>
+              <svg class="rotate-0 transform transition-transform" id="icon-collapse5" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
+              </svg>
+            </button>
+            
+            <div id="collapse5" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+              <p class="p-4 pt-0 text-xs text-white">
+                Tailwind CSS te permite tener control total sobre el diseño, sin
+                limitaciones de clases predefinidas, y facilita la creación de
+                componentes personalizados.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Collapsible Item 6 -->
-      <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
-        <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
-          <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[13px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none"
-            data-collapse-id="collapse6">
-            <span class="max-w-[282px]">
-              Si necesito hacer cambios en mis procesos o mensajes, ¿Cómo puedo hacerlo?
-            </span>
-            <svg class="rotate-0 transform transition-transform" id="icon-collapse6" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
-            </svg>
-          </button>
-          
-          <div id="collapse6" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-            <p class="p-4 pt-0 text-xs text-white">
-              Tailwind CSS te permite tener control total sobre el diseño, sin
-              limitaciones de clases predefinidas, y facilita la creación de
-              componentes personalizados.
-            </p>
+        <!-- Collapsible Item 6 -->
+        <div class="relative mb-6 rounded-[20px] bg-gradient-to-r from-[rgba(236,103,7,0.6)] to-[rgba(255,255,255,0)] p-0.5">
+          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)]">
+            <button class="js-toggle-collapse flex w-full items-center justify-between px-[19px] py-[13px] text-left text-[15px] font-medium leading-5 text-white focus:outline-none xl:text-[22px] xl:leading-8 xl:py-[9px]"
+              data-collapse-id="collapse6">
+              <span class="max-w-[282px] xl:max-w-[494px]">
+                Si necesito hacer cambios en mis procesos o mensajes, ¿Cómo puedo hacerlo?
+              </span>
+              <svg class="rotate-0 transform transition-transform" id="icon-collapse6" width="33" height="19" viewBox="0 0 33 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.3652 3.74865L18.0222 18.3556C17.8223 18.5598 17.5848 18.7219 17.3233 18.8325C17.0617 18.9431 16.7814 19 16.4982 19C16.215 19 15.9347 18.9431 15.6732 18.8325C15.4116 18.7219 15.1741 18.5598 14.9743 18.3556L0.631239 3.74865C0.227064 3.33704 -6.02268e-09 2.77877 0 2.19666C6.02269e-09 1.61456 0.227064 1.05629 0.631239 0.644679C1.03541 0.233067 1.58359 0.00182626 2.15519 0.00182625C2.72678 0.00182625 3.27496 0.233067 3.67913 0.644679L16.5 13.7014L29.3209 0.642854C29.725 0.231242 30.2732 0 30.8448 0C31.4164 0 31.9646 0.231242 32.3688 0.642854C32.7729 1.05447 33 1.61273 33 2.19484C33 2.77695 32.7729 3.33521 32.3688 3.74682L32.3652 3.74865Z" fill="#EC6707" />
+              </svg>
+            </button>
+            
+            <div id="collapse6" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+              <p class="p-4 pt-0 text-xs text-white">
+                Tailwind CSS te permite tener control total sobre el diseño, sin
+                limitaciones de clases predefinidas, y facilita la creación de
+                componentes personalizados.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -698,7 +876,7 @@
   </section>
 
   <footer>
-    <div class="mx-auto grid max-w-[1208px] gap-y-10 px-4 pb-11 pt-24 lg:grid-cols-2 lg:items-baseline lg:gap-x-10 xl:items-start">
+    <div class="mx-auto grid max-w-[1208px] gap-y-10 px-4 pb-11 pt-24 lg:grid-cols-2 lg:items-start lg:gap-x-10">
       <div class="grid grid-cols-2 grid-rows-2 items-center gap-x-4 gap-y-[27px] lg:grid-cols-1 lg:grid-rows-none xl:gap-y-8">
         <svg class="col-span-1 row-span-1 max-w-full lg:w-[122px]" width="191" height="53" viewBox="0 0 191 53" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M69.458 34.8087L62.6595 19.1635L57.1294 19.2L66.8027 41.1033L71.8305 41.0708L81.1981 19.043L76.1393 19.0755L69.458 34.8087Z" fill="white" />

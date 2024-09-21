@@ -16,6 +16,39 @@
   }
 }
 
+@layer utilities {
+  .grid-template-custom {
+    display: grid;
+    grid-template-areas: 
+      "left right"
+      "bottom right";
+  }
+
+  .grid-area-left {
+    grid-area: left;
+  }
+
+  .grid-area-right {
+    grid-area: right;
+  }
+
+  .grid-area-bottom {
+    grid-area: bottom;
+  }
+}
+
+.welcome-custom-gradient::after {
+  content: "";
+  @apply absolute bottom-0 left-0 h-full w-full;
+  background: linear-gradient(180deg, rgba(15,15,14,1) 0%, rgba(15,15,14,0.5) 25%, rgba(0, 157, 61,0.5) 75%, rgba(0, 157, 61,0.4) 85%, rgba(15,15,14,1) 100%);
+}
+
+.transform-custom-gradient::after {
+  content: "";
+  @apply absolute bottom-0 left-0 h-full w-full;
+  background: linear-gradient(180deg, rgba(15,15,14,1) 0%, rgba(15,15,14,0.75) 25%, rgba(15,15,14,0.75) 50%, rgba(15,15,14,0.75) 75%, rgba(15,15,14,1) 100%);
+}
+
 .custom-gradient::after {
   content: "";
   @apply absolute bottom-0 left-0 h-full w-full;

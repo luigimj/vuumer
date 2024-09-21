@@ -28,7 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (supportsNativeLazyLoad) {
     lazyImages.forEach((img) => {
+      // Load image from data-src
       img.src = img.dataset.src;
+      
+      // Load source from data-srcset if it exists
+      const sources = img.closest('picture').querySelectorAll('source');
+      sources.forEach(source => {
+        if (source.dataset.srcset) {
+          source.srcset = source.dataset.srcset;
+        }
+      });
+      
       img.classList.remove("js-lazy");
     });
   } else {
@@ -39,6 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
           if (entry.isIntersecting) {
             const img = entry.target;
             img.src = img.dataset.src; // Load image from data-src
+
+            // Load source from data-srcset if it exists
+            const sources = img.closest('picture').querySelectorAll('source');
+            sources.forEach(source => {
+              if (source.dataset.srcset) {
+                source.srcset = source.dataset.srcset;
+              }
+            });
+
             img.classList.remove("js-lazy");
             imageObserver.unobserve(img);
           }
@@ -65,6 +84,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
               if (isInViewport && isVisible) {
                 img.src = img.dataset.src; // Load image from data-src
+
+                // Load source from data-srcset if it exists
+                const sources = img.closest('picture').querySelectorAll('source');
+                sources.forEach(source => {
+                  if (source.dataset.srcset) {
+                    source.srcset = source.dataset.srcset;
+                  }
+                });
+
                 img.classList.remove("js-lazy");
 
                 lazyImages = [...lazyImages].filter((item) => {
