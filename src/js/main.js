@@ -43,19 +43,43 @@ const sliderMentors = new Swiper('#slider-mentors', {
   },
 });
 
-const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const closeMenu = document.getElementById('close-menu');
+// const menuToggle = document.getElementById('menu-toggle');
+//   const mobileMenu = document.getElementById('mobile-menu');
+//   const closeMenu = document.getElementById('close-menu');
 
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('translate-x-full');
-    mobileMenu.classList.toggle('translate-x-0');
-  });
+//   menuToggle.addEventListener('click', () => {
+//     mobileMenu.classList.toggle('translate-x-full');
+//     mobileMenu.classList.toggle('translate-x-0');
+//   });
 
-  closeMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('translate-x-full');
-    mobileMenu.classList.toggle('translate-x-0');
-  });
+//   closeMenu.addEventListener('click', () => {
+//     mobileMenu.classList.toggle('translate-x-full');
+//     mobileMenu.classList.toggle('translate-x-0');
+//   });
+
+const mobileMenu = document.getElementById('mobile-menu');
+const openMenuBtn = document.getElementById('menu-toggle');
+const closeMenuBtn = document.getElementById('close-menu');
+const menuLinks = mobileMenu.querySelector('ul');
+
+function openMenu() {
+  mobileMenu.classList.remove('translate-x-full', 'opacity-0');
+  mobileMenu.classList.add('translate-x-0', 'opacity-100');
+  setTimeout(() => {
+    menuLinks.classList.remove('opacity-0');
+    menuLinks.classList.add('opacity-100');
+  }, 300); // Se retrasa la aparición de los enlaces para que coincida con la animación del menú
+}
+
+function closeMenu() {
+  mobileMenu.classList.add('translate-x-full', 'opacity-0');
+  mobileMenu.classList.remove('translate-x-0', 'opacity-100');
+  menuLinks.classList.add('opacity-0');
+  menuLinks.classList.remove('opacity-100');
+}
+
+closeMenuBtn.addEventListener('click', closeMenu);
+openMenuBtn.addEventListener('click', openMenu);
 
 const toggleCollapse = (collapseId) => {
   const content = document.getElementById(collapseId);

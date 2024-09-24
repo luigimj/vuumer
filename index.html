@@ -77,23 +77,33 @@
 
     <!-- Menú lateral -->
     <nav id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
-      <div class="flex items-center justify-between p-4 border-b">
-        <span class="text-lg font-bold">Menú</span>
-        <button id="close-menu" class="text-gray-700">
-          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      <div class="flex items-center justify-between px-6 py-7 border-b">
+         <!-- Logo for mobile -->
+        <span class="lg:hidden">
+          <svg width="45" height="33" viewBox="0 0 45 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.8656 32.876C27.8621 32.8552 27.8586 32.8335 27.856 32.8127C27.8586 32.8335 27.8621 32.8552 27.8647 32.876H27.8656Z" fill="#0F0F0E" />
+            <path d="M27.787 0.137037C20.9787 8.99849 19.3472 21.4847 23.5636 31.8323C24.9527 32.214 26.3798 32.5029 27.837 32.6921C27.4117 29.8542 26.6852 22.262 30.7783 14.0764C35.1975 5.24014 42.4432 1.29179 44.8098 0.124023C39.1352 0.127494 33.4615 0.131832 27.787 0.137037Z" fill="#0F0F0E" />
+            <path d="M27.8388 32.6912C27.8388 32.6912 27.8379 32.6912 27.837 32.6912C27.8431 32.7329 27.8492 32.7736 27.8553 32.8127C27.8492 32.7719 27.844 32.732 27.8379 32.6912H27.8388Z" fill="#0F0F0E" />
+            <path d="M20.5999 0.136169H11.7348C10.9186 2.98964 10.4812 6.00708 10.4812 9.12602C10.4812 16.8813 13.1825 23.9972 17.6863 29.5653C18.6362 30.046 19.6138 30.4797 20.6146 30.8641C18.1626 26.2911 16.7709 21.0526 16.7709 15.4854C16.7709 9.91812 18.1574 4.70224 20.5999 0.136169Z" fill="#0F0F0E" />
+            <path d="M7.01275 0.136549H0.00345116C0.000862789 0.306594 0 0.477507 0 0.647553C0 11.1912 4.99469 20.5559 12.7218 26.452C8.68311 21.0417 6.28887 14.3076 6.28887 7.00691C6.28887 4.64883 6.53908 2.35061 7.01275 0.135681V0.136549Z" fill="#0F0F0E" />
+          </svg>
+        </span>
+
+        <button id="close-menu" class="text-[#0f0f0e]">
+          <svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
       
-      <ul class="mt-4">
-        <li class="py-2 px-4 hover:bg-gray-100">
+      <ul class="grid gap-6 mt-16 transition-opacity duration-300 ease-in-out opacity-0">
+        <li class="py-2 px-4 hover:bg-gray-100 text-center text-2xl">
           <a href="#">Home</a>
         </li>
-        <li class="py-2 px-4 hover:bg-gray-100">
+        <li class="py-2 px-4 hover:bg-gray-100 text-center text-2xl">
           <a href="#">Nosotros</a>
         </li>
-        <li class="py-2 px-4 hover:bg-gray-100">
+        <li class="py-2 px-4 hover:bg-gray-100 text-center text-2xl">
           <a href="#">Contacto</a>
         </li>
       </ul>
@@ -624,11 +634,11 @@
             <div class="lg:grid lg:grid-cols-2 lg:items-center">
               <div class="custom-gradient relative mb-5 lg:mb-0 lg:order-2">
                 <picture>
-                  <source data-srcset="/images/mentors/omar-sanchez-desktop.webp" type="image/webp" media="(min-width: 1024px)">
-                  <source data-srcset="/images/mentors/omar-sanchez-desktop.png" type="image/png" media="(min-width: 1024px)">
-                  <source data-srcset="/images/mentors/omar-sanchez-mobile.webp" type="image/webp">
+                  <source data-srcset="/images/mentors/lord-dennis-2-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/lord-dennis-2-desktop.png" type="image/png" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/lord-dennis-2-mobile.webp" type="image/webp">
                   <img class="js-lazy mx-auto" 
-                    data-src="/images/mentors/omar-sanchez-mobile.png" alt="" loading="lazy" />
+                    data-src="/images/mentors/lord-dennis-2-mobile.png" alt="" loading="lazy" />
                 </picture>
               </div>
               <div class="text-center lg:text-left text-white lg:order-1">
@@ -688,11 +698,11 @@
             <div class="lg:grid lg:grid-cols-2 lg:items-center">
               <div class="custom-gradient relative mb-5 lg:mb-0 lg:order-2">
                 <picture>
-                  <source data-srcset="/images/mentors/omar-sanchez-desktop.webp" type="image/webp" media="(min-width: 1024px)">
-                  <source data-srcset="/images/mentors/omar-sanchez-desktop.png" type="image/png" media="(min-width: 1024px)">
-                  <source data-srcset="/images/mentors/omar-sanchez-mobile.webp" type="image/webp">
+                  <source data-srcset="/images/mentors/antonio-yataco-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/antonio-yataco-desktop.png" type="image/png" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/antonio-yataco-mobile.webp" type="image/webp">
                   <img class="js-lazy mx-auto" 
-                    data-src="/images/mentors/omar-sanchez-mobile.png" alt="" loading="lazy" />
+                    data-src="/images/mentors/antonio-yataco-mobile.png" alt="" loading="lazy" />
                 </picture>
               </div>
               <div class="text-center lg:text-left text-white lg:order-1">
@@ -720,11 +730,11 @@
             <div class="lg:grid lg:grid-cols-2 lg:items-center">
               <div class="custom-gradient relative mb-5 lg:mb-0 lg:order-2">
                 <picture>
-                  <source data-srcset="/images/mentors/omar-sanchez-desktop.webp" type="image/webp" media="(min-width: 1024px)">
-                  <source data-srcset="/images/mentors/omar-sanchez-desktop.png" type="image/png" media="(min-width: 1024px)">
-                  <source data-srcset="/images/mentors/omar-sanchez-mobile.webp" type="image/webp">
+                  <source data-srcset="/images/mentors/ruben-viera-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/ruben-viera-desktop.png" type="image/png" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/ruben-viera-mobile.webp" type="image/webp">
                   <img class="js-lazy mx-auto" 
-                    data-src="/images/mentors/omar-sanchez-mobile.png" alt="" loading="lazy" />
+                    data-src="/images/mentors/ruben-viera-mobile.png" alt="" loading="lazy" />
                 </picture>
               </div>
               <div class="text-center lg:text-left text-white lg:order-1">
@@ -752,11 +762,11 @@
             <div class="lg:grid lg:grid-cols-2 lg:items-center">
               <div class="custom-gradient relative mb-5 lg:mb-0 lg:order-2">
                 <picture>
-                  <source data-srcset="/images/mentors/omar-sanchez-desktop.webp" type="image/webp" media="(min-width: 1024px)">
-                  <source data-srcset="/images/mentors/omar-sanchez-desktop.png" type="image/png" media="(min-width: 1024px)">
-                  <source data-srcset="/images/mentors/omar-sanchez-mobile.webp" type="image/webp">
+                  <source data-srcset="/images/mentors/daniel-meza-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/daniel-meza-desktop.png" type="image/png" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/daniel-meza-mobile.webp" type="image/webp">
                   <img class="js-lazy mx-auto" 
-                    data-src="/images/mentors/omar-sanchez-mobile.png" alt="" loading="lazy" />
+                    data-src="/images/mentors/daniel-meza-mobile.png" alt="" loading="lazy" />
                 </picture>
               </div>
               <div class="text-center lg:text-left text-white lg:order-1">
@@ -797,41 +807,51 @@
         <div class="swiper-wrapper items-center">
           <div class="swiper-slide">
             <div class="thumbnail relative rounded-full overflow-hidden">
-              <img class="absolute bottom-0 w-full h-full" 
-                src="/images/mentors/lord-dennis-thumbnail.png" 
-                alt="">
+              <picture>
+                <source data-srcset="/images/mentors/lord-dennis-thumbnail.webp" type="image/webp">
+                <img class="js-lazy absolute bottom-0 w-full h-full" 
+                  data-src="/images/mentors/lord-dennis-thumbnail.png" alt="" loading="lazy" />
+              </picture>
             </div>
           </div>
 
           <div class="swiper-slide">
             <div class="thumbnail relative rounded-full overflow-hidden">
-              <img class="absolute bottom-0 w-full h-full" 
-                src="/images/mentors/omar-sanchez-thumbnail.png" 
-                alt="">
+              <picture>
+                <source data-srcset="/images/mentors/omar-sanchez-thumbnail.webp" type="image/webp">
+                <img class="js-lazy absolute bottom-0 w-full h-full" 
+                  data-src="/images/mentors/omar-sanchez-thumbnail.png" alt="" loading="lazy" />
+              </picture>
             </div>
           </div>
 
           <div class="swiper-slide">
             <div class="thumbnail relative rounded-full overflow-hidden">
-              <img class="absolute bottom-0 w-full h-full" 
-                src="/images/mentors/antonio-yataco-thumbnail.png" 
-                alt="">
+              <picture>
+                <source data-srcset="/images/mentors/antonio-yataco-thumbnail.webp" type="image/webp">
+                <img class="js-lazy absolute bottom-0 w-full h-full" 
+                  data-src="/images/mentors/antonio-yataco-thumbnail.png" alt="" loading="lazy" />
+              </picture>
             </div>
           </div>
 
           <div class="swiper-slide">
             <div class="thumbnail relative rounded-full overflow-hidden">
-              <img class="absolute bottom-0 w-full h-full" 
-                src="/images/mentors/ruben-viera-thumbnail.png" 
-                alt="">
+              <picture>
+                <source data-srcset="/images/mentors/ruben-viera-thumbnail.webp" type="image/webp">
+                <img class="js-lazy absolute bottom-0 w-full h-full" 
+                  data-src="/images/mentors/ruben-viera-thumbnail.png" alt="" loading="lazy" />
+              </picture>
             </div>
           </div>
 
           <div class="swiper-slide">
             <div class="thumbnail relative rounded-full overflow-hidden">
-              <img class="absolute bottom-0 w-full h-full" 
-                src="/images/mentors/daniel-meza-thumbnail.png" 
-                alt="">
+              <picture>
+                <source data-srcset="/images/mentors/daniel-meza-thumbnail.webp" type="image/webp">
+                <img class="js-lazy absolute bottom-0 w-full h-full" 
+                  data-src="/images/mentors/daniel-meza-thumbnail.png" alt="" loading="lazy" />
+              </picture>
             </div>
           </div>
         </div>
