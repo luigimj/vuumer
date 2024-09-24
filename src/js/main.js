@@ -43,20 +43,6 @@ const sliderMentors = new Swiper('#slider-mentors', {
   },
 });
 
-// const menuToggle = document.getElementById('menu-toggle');
-//   const mobileMenu = document.getElementById('mobile-menu');
-//   const closeMenu = document.getElementById('close-menu');
-
-//   menuToggle.addEventListener('click', () => {
-//     mobileMenu.classList.toggle('translate-x-full');
-//     mobileMenu.classList.toggle('translate-x-0');
-//   });
-
-//   closeMenu.addEventListener('click', () => {
-//     mobileMenu.classList.toggle('translate-x-full');
-//     mobileMenu.classList.toggle('translate-x-0');
-//   });
-
 const mobileMenu = document.getElementById('mobile-menu');
 const openMenuBtn = document.getElementById('menu-toggle');
 const closeMenuBtn = document.getElementById('close-menu');
