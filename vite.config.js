@@ -13,11 +13,11 @@ export default defineConfig({
       targets: [
         {
           src: 'nosotros.html', // Tu archivo 'nosotros.html'
-          dest: 'dist' // Lo copias directamente al root de 'dist'
+          dest: '' // Lo copias directamente al root de 'dist'
         },
         {
           src: 'contacto.html', // Tu archivo 'contacto.html'
-          dest: 'dist' // Lo copias directamente al root de 'dist'
+          dest: '' // Lo copias directamente al root de 'dist'
         }
       ]
     })
