@@ -1,30 +1,87 @@
-console.log("Main.js loaded successfully!");
+import Swiper from 'swiper';
+import { Navigation, EffectCoverflow, Thumbs } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-coverflow';
+
+const sliderWelcome = new Swiper('#slider-welcome', {
+  modules: [EffectCoverflow],
+  initialSlide: 1,
+	slidesPerView: 1,
+	effect: 'coverflow',
+	grabCursor: true,
+	centeredSlides: true,
+	spaceBetween: -100,
+	coverflowEffect: {
+		rotate: 0,
+		stretch: 0,
+		depth: 400,
+		modifier: 1,
+		slideShadows: false
+	},
+});
+
+const sliderMentorsThumbnail = new Swiper('#slider-mentors-thumbnail', {
+  spaceBetween: -30,
+  slidesPerView: 5,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+
+const sliderMentors = new Swiper('#slider-mentors', {
+  modules: [Navigation, Thumbs],
+  spaceBetween: 30,
+  effect: 'fade',
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  thumbs: {
+    swiper: sliderMentorsThumbnail,
+  },
+});
+
+const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenu = document.getElementById('close-menu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('translate-x-full');
+    mobileMenu.classList.toggle('translate-x-0');
+  });
+
+  closeMenu.addEventListener('click', () => {
+    mobileMenu.classList.toggle('translate-x-full');
+    mobileMenu.classList.toggle('translate-x-0');
+  });
 
 const toggleCollapse = (collapseId) => {
   const content = document.getElementById(collapseId);
-  const icon = document.getElementById("icon-" + collapseId);
+  const icon = document.getElementById('icon-' + collapseId);
 
   if (content.style.maxHeight) {
     content.style.maxHeight = null; // Collapse
-    icon.classList.remove("rotate-180");
+    icon.classList.remove('rotate-180');
   } else {
-    content.style.maxHeight = content.scrollHeight + "px"; // Expand
-    icon.classList.add("rotate-180");
+    content.style.maxHeight = content.scrollHeight + 'px'; // Expand
+    icon.classList.add('rotate-180');
   }
 };
 
-const toggles = document.querySelectorAll(".js-toggle-collapse");
+const toggles = document.querySelectorAll('.js-toggle-collapse');
 
 toggles.forEach((toggle) => {
   const collapseId = toggle.dataset.collapseId;
-  toggle.addEventListener("click", () => toggleCollapse(collapseId));
+  toggle.addEventListener('click', () => toggleCollapse(collapseId));
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  let lazyImages = document.querySelectorAll("img.js-lazy");
+document.addEventListener('DOMContentLoaded', () => {
+  let lazyImages = document.querySelectorAll('img.js-lazy');
 
   // Check if native lazy loading is supported
-  const supportsNativeLazyLoad = "loading" in HTMLImageElement.prototype;
+  const supportsNativeLazyLoad = 'loading' in HTMLImageElement.prototype;
 
   if (supportsNativeLazyLoad) {
     lazyImages.forEach((img) => {
@@ -39,11 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
       
-      img.classList.remove("js-lazy");
+      img.classList.remove('js-lazy');
     });
   } else {
     // Fallback: IntersectionObserver for older browsers
-    if ("IntersectionObserver" in window) {
+    if ('IntersectionObserver' in window) {
       const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -58,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             });
 
-            img.classList.remove("js-lazy");
+            img.classList.remove('js-lazy');
             imageObserver.unobserve(img);
           }
         });
@@ -69,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     } else {
       // If no IntersectionObserver, load all images immediately (old browsers fallback)
-      console.warning("IntersectionObserver is not supported");
+      console.warning('IntersectionObserver is not supported');
 
       let active = false;
 
@@ -80,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
           setTimeout(() => {
             lazyImages.forEach((img) => {
               const isInViewport = img.getBoundingClientRect().top <= window.innerHeight && img.getBoundingClientRect().bottom >= 0;
-              const isVisible = getComputedStyle(img).display !== "none";
+              const isVisible = getComputedStyle(img).display !== 'none';
 
               if (isInViewport && isVisible) {
                 img.src = img.dataset.src; // Load image from data-src
@@ -93,16 +150,16 @@ document.addEventListener("DOMContentLoaded", () => {
                   }
                 });
 
-                img.classList.remove("js-lazy");
+                img.classList.remove('js-lazy');
 
                 lazyImages = [...lazyImages].filter((item) => {
                   return item !== img;
                 });
 
                 if (lazyImages.length === 0) {
-                  document.removeEventListener("scroll", lazyLoad);
-                  window.removeEventListener("resize", lazyLoad);
-                  window.removeEventListener("orientationchange", lazyLoad);
+                  document.removeEventListener('scroll', lazyLoad);
+                  window.removeEventListener('resize', lazyLoad);
+                  window.removeEventListener('orientationchange', lazyLoad);
                 }
               }
             });
@@ -112,9 +169,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       };
 
-      document.addEventListener("scroll", lazyLoad);
-      window.addEventListener("resize", lazyLoad);
-      window.addEventListener("orientationchange", lazyLoad);
+      document.addEventListener('scroll', lazyLoad);
+      window.addEventListener('resize', lazyLoad);
+      window.addEventListener('orientationchange', lazyLoad);
     }
   }
 });

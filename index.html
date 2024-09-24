@@ -68,12 +68,36 @@
     </a>
 
     <!-- Hamburger Menu (visible on mobile) -->
-    <button aria-label="Main menu" class="text-custom focus:outline-none lg:hidden">
+    <button id="menu-toggle" aria-label="Main menu" class="text-custom focus:outline-none lg:hidden">
       <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6.66667 10.5H33.3333M6.66667 20.5H33.3333M6.66667 30.5H33.3333" stroke="#0F0F0E" stroke-width="4"
           stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </button>
+
+    <!-- Menú lateral -->
+    <nav id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out">
+      <div class="flex items-center justify-between p-4 border-b">
+        <span class="text-lg font-bold">Menú</span>
+        <button id="close-menu" class="text-gray-700">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <ul class="mt-4">
+        <li class="py-2 px-4 hover:bg-gray-100">
+          <a href="#">Home</a>
+        </li>
+        <li class="py-2 px-4 hover:bg-gray-100">
+          <a href="#">Nosotros</a>
+        </li>
+        <li class="py-2 px-4 hover:bg-gray-100">
+          <a href="#">Contacto</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Bienvenidos -->
@@ -108,14 +132,35 @@
       </a>
     </div>
 
-    <div>
-      <picture>
-        <source data-srcset="/images/welcome/dashboard-desktop.webp" type="image/webp" media="(min-width: 1024px)">
-        <source data-srcset="/images/welcome/dashboard-desktop.png" type="image/png" media="(min-width: 1024px)">
-        <source data-srcset="/images/welcome/dashboard-mobile.webp" type="image/webp">
-        <img class="js-lazy w-full h-full object-cover object-[center_top]" 
-          data-src="/images/welcome/dashboard-mobile.png" alt="" loading="lazy" />
-      </picture>
+    <div class="overflow-hidden">
+    <div class="slider-welcome swiper-container max-w-3xl mx-auto" id="slider-welcome">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/images/welcome/dashboard-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-desktop.png" type="image/png" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-mobile.webp" type="image/webp">
+            <img src="/images/welcome/dashboard-mobile.png" alt="" loading="lazy" />
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/images/welcome/dashboard-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-desktop.png" type="image/png" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-mobile.webp" type="image/webp">
+            <img src="/images/welcome/dashboard-mobile.png" alt="" loading="lazy" />
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/images/welcome/dashboard-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-desktop.png" type="image/png" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-mobile.webp" type="image/webp">
+            <img src="/images/welcome/dashboard-mobile.png" alt="" loading="lazy" />
+          </picture>
+        </div>
+      </div>
+    </div>
     </div>
   </section>
 
@@ -573,33 +618,222 @@
         Nuestros mentores
       </h2>
 
-      <div class="lg:grid lg:grid-cols-2 lg:items-center">
-        <div class="custom-gradient relative mb-5 lg:mb-0 lg:order-2">
-          <picture>
-            <source data-srcset="/images/mentors/omar-sanchez-desktop.webp" type="image/webp" media="(min-width: 1024px)">
-            <source data-srcset="/images/mentors/omar-sanchez-desktop.png" type="image/png" media="(min-width: 1024px)">
-            <source data-srcset="/images/mentors/omar-sanchez-mobile.webp" type="image/webp">
-            <img class="js-lazy mx-auto" 
-              data-src="/images/mentors/omar-sanchez-mobile.png" alt="" loading="lazy" />
-          </picture>
-        </div>
-        <div class="text-center lg:text-left text-white lg:order-1">
-          <h3 class="mb-4 text-3xl font-medium leading-[46px] lg:text-7xl lg:mb-7 lg:leading-[46px]">
-            Omar Sánchez
-          </h3>
-          <span class="hidden lg:block text-[35px] leading-[46px] mb-10">
-            Experto en e-commerce
-          </span>
+      <div class="slider-mentors swiper" id="slider-mentors">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="lg:grid lg:grid-cols-2 lg:items-center">
+              <div class="custom-gradient relative mb-5 lg:mb-0 lg:order-2">
+                <picture>
+                  <source data-srcset="/images/mentors/omar-sanchez-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/omar-sanchez-desktop.png" type="image/png" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/omar-sanchez-mobile.webp" type="image/webp">
+                  <img class="js-lazy mx-auto" 
+                    data-src="/images/mentors/omar-sanchez-mobile.png" alt="" loading="lazy" />
+                </picture>
+              </div>
+              <div class="text-center lg:text-left text-white lg:order-1">
+                <h3 class="mb-4 text-3xl font-medium leading-[46px] lg:text-7xl lg:mb-7 lg:leading-[46px]">
+                  Lord Dennis
+                </h3>
+                <span class="hidden lg:block text-[35px] leading-[46px] mb-10">
+                  Experto en e-commerce
+                </span>
 
-          <p class="text-base font-normal leading-[26px] lg:text-[19px] lg:leading-[29px] lg:max-w-[596px]">
-            Un experto en e-commerce con más de 10 años de experiencia en la 
-            industria digital. Ha trabajado como consultor para empresas de 
-            diferentes tamaños, ayudándolas a desarrollar tiendas en línea 
-            exitosas y optimizar sus estrategias de venta. Especializado en 
-            plataformas como Shopify y WooCommerce, Omar ha asesorado a 
-            emprendedores en áreas clave como la optimización de conversiones, 
-            automatización del marketing y gestión de inventarios. 
-          </p>
+                <p class="text-base font-normal leading-[26px] lg:text-[19px] lg:leading-[29px] lg:max-w-[596px]">
+                  Un experto en e-commerce con más de 10 años de experiencia en la 
+                  industria digital. Ha trabajado como consultor para empresas de 
+                  diferentes tamaños, ayudándolas a desarrollar tiendas en línea 
+                  exitosas y optimizar sus estrategias de venta. Especializado en 
+                  plataformas como Shopify y WooCommerce, Omar ha asesorado a 
+                  emprendedores en áreas clave como la optimización de conversiones, 
+                  automatización del marketing y gestión de inventarios. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="lg:grid lg:grid-cols-2 lg:items-center">
+              <div class="custom-gradient relative mb-5 lg:mb-0 lg:order-2">
+                <picture>
+                  <source data-srcset="/images/mentors/omar-sanchez-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/omar-sanchez-desktop.png" type="image/png" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/omar-sanchez-mobile.webp" type="image/webp">
+                  <img class="js-lazy mx-auto" 
+                    data-src="/images/mentors/omar-sanchez-mobile.png" alt="" loading="lazy" />
+                </picture>
+              </div>
+              <div class="text-center lg:text-left text-white lg:order-1">
+                <h3 class="mb-4 text-3xl font-medium leading-[46px] lg:text-7xl lg:mb-7 lg:leading-[46px]">
+                  Omar Sánchez
+                </h3>
+                <span class="hidden lg:block text-[35px] leading-[46px] mb-10">
+                  Experto en e-commerce
+                </span>
+
+                <p class="text-base font-normal leading-[26px] lg:text-[19px] lg:leading-[29px] lg:max-w-[596px]">
+                  Un experto en e-commerce con más de 10 años de experiencia en la 
+                  industria digital. Ha trabajado como consultor para empresas de 
+                  diferentes tamaños, ayudándolas a desarrollar tiendas en línea 
+                  exitosas y optimizar sus estrategias de venta. Especializado en 
+                  plataformas como Shopify y WooCommerce, Omar ha asesorado a 
+                  emprendedores en áreas clave como la optimización de conversiones, 
+                  automatización del marketing y gestión de inventarios. 
+                </p>
+              </div>
+            </div>      
+          </div>
+
+          <div class="swiper-slide">
+            <div class="lg:grid lg:grid-cols-2 lg:items-center">
+              <div class="custom-gradient relative mb-5 lg:mb-0 lg:order-2">
+                <picture>
+                  <source data-srcset="/images/mentors/omar-sanchez-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/omar-sanchez-desktop.png" type="image/png" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/omar-sanchez-mobile.webp" type="image/webp">
+                  <img class="js-lazy mx-auto" 
+                    data-src="/images/mentors/omar-sanchez-mobile.png" alt="" loading="lazy" />
+                </picture>
+              </div>
+              <div class="text-center lg:text-left text-white lg:order-1">
+                <h3 class="mb-4 text-3xl font-medium leading-[46px] lg:text-7xl lg:mb-7 lg:leading-[46px]">
+                  Antonio Yataco
+                </h3>
+                <span class="hidden lg:block text-[35px] leading-[46px] mb-10">
+                  Experto en e-commerce
+                </span>
+
+                <p class="text-base font-normal leading-[26px] lg:text-[19px] lg:leading-[29px] lg:max-w-[596px]">
+                  Un experto en e-commerce con más de 10 años de experiencia en la 
+                  industria digital. Ha trabajado como consultor para empresas de 
+                  diferentes tamaños, ayudándolas a desarrollar tiendas en línea 
+                  exitosas y optimizar sus estrategias de venta. Especializado en 
+                  plataformas como Shopify y WooCommerce, Omar ha asesorado a 
+                  emprendedores en áreas clave como la optimización de conversiones, 
+                  automatización del marketing y gestión de inventarios. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="lg:grid lg:grid-cols-2 lg:items-center">
+              <div class="custom-gradient relative mb-5 lg:mb-0 lg:order-2">
+                <picture>
+                  <source data-srcset="/images/mentors/omar-sanchez-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/omar-sanchez-desktop.png" type="image/png" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/omar-sanchez-mobile.webp" type="image/webp">
+                  <img class="js-lazy mx-auto" 
+                    data-src="/images/mentors/omar-sanchez-mobile.png" alt="" loading="lazy" />
+                </picture>
+              </div>
+              <div class="text-center lg:text-left text-white lg:order-1">
+                <h3 class="mb-4 text-3xl font-medium leading-[46px] lg:text-7xl lg:mb-7 lg:leading-[46px]">
+                  Ruben Viera
+                </h3>
+                <span class="hidden lg:block text-[35px] leading-[46px] mb-10">
+                  Experto en e-commerce
+                </span>
+
+                <p class="text-base font-normal leading-[26px] lg:text-[19px] lg:leading-[29px] lg:max-w-[596px]">
+                  Un experto en e-commerce con más de 10 años de experiencia en la 
+                  industria digital. Ha trabajado como consultor para empresas de 
+                  diferentes tamaños, ayudándolas a desarrollar tiendas en línea 
+                  exitosas y optimizar sus estrategias de venta. Especializado en 
+                  plataformas como Shopify y WooCommerce, Omar ha asesorado a 
+                  emprendedores en áreas clave como la optimización de conversiones, 
+                  automatización del marketing y gestión de inventarios. 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="lg:grid lg:grid-cols-2 lg:items-center">
+              <div class="custom-gradient relative mb-5 lg:mb-0 lg:order-2">
+                <picture>
+                  <source data-srcset="/images/mentors/omar-sanchez-desktop.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/omar-sanchez-desktop.png" type="image/png" media="(min-width: 1024px)">
+                  <source data-srcset="/images/mentors/omar-sanchez-mobile.webp" type="image/webp">
+                  <img class="js-lazy mx-auto" 
+                    data-src="/images/mentors/omar-sanchez-mobile.png" alt="" loading="lazy" />
+                </picture>
+              </div>
+              <div class="text-center lg:text-left text-white lg:order-1">
+                <h3 class="mb-4 text-3xl font-medium leading-[46px] lg:text-7xl lg:mb-7 lg:leading-[46px]">
+                  Daniel Meza
+                </h3>
+                <span class="hidden lg:block text-[35px] leading-[46px] mb-10">
+                  Experto en e-commerce
+                </span>
+
+                <p class="text-base font-normal leading-[26px] lg:text-[19px] lg:leading-[29px] lg:max-w-[596px]">
+                  Un experto en e-commerce con más de 10 años de experiencia en la 
+                  industria digital. Ha trabajado como consultor para empresas de 
+                  diferentes tamaños, ayudándolas a desarrollar tiendas en línea 
+                  exitosas y optimizar sus estrategias de venta. Especializado en 
+                  plataformas como Shopify y WooCommerce, Omar ha asesorado a 
+                  emprendedores en áreas clave como la optimización de conversiones, 
+                  automatización del marketing y gestión de inventarios. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-button-prev">
+          <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+            <path d="M20.5 3L33 15.6316M33 15.6316L20.5 28.2632M33 15.6316L3 15.6316" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next">
+          <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5 3L33 15.6316M33 15.6316L20.5 28.2632M33 15.6316L3 15.6316" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="slider-mentors-thumbnail swiper max-w-[588px] !ml-0 mr-auto" id="slider-mentors-thumbnail" thumbsSlider="">
+        <div class="swiper-wrapper items-center">
+          <div class="swiper-slide">
+            <div class="thumbnail relative rounded-full overflow-hidden">
+              <img class="absolute bottom-0 w-full h-full" 
+                src="/images/mentors/lord-dennis-thumbnail.png" 
+                alt="">
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="thumbnail relative rounded-full overflow-hidden">
+              <img class="absolute bottom-0 w-full h-full" 
+                src="/images/mentors/omar-sanchez-thumbnail.png" 
+                alt="">
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="thumbnail relative rounded-full overflow-hidden">
+              <img class="absolute bottom-0 w-full h-full" 
+                src="/images/mentors/antonio-yataco-thumbnail.png" 
+                alt="">
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="thumbnail relative rounded-full overflow-hidden">
+              <img class="absolute bottom-0 w-full h-full" 
+                src="/images/mentors/ruben-viera-thumbnail.png" 
+                alt="">
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="thumbnail relative rounded-full overflow-hidden">
+              <img class="absolute bottom-0 w-full h-full" 
+                src="/images/mentors/daniel-meza-thumbnail.png" 
+                alt="">
+            </div>
+          </div>
         </div>
       </div>
     </div>

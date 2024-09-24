@@ -13,6 +13,9 @@ export default defineConfig({
     },
   },
   server: {
+    mimeTypes: {
+      'application/javascript': ['js', 'mjs'],
+    },
     watch: {
       usePolling: true,
     },
