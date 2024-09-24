@@ -37,21 +37,37 @@
   }
 }
 
-.welcome-custom-gradient::after {
+.custom-gradient::after,
+.welcome-custom-gradient::after,
+.transform-custom-gradient::after,
+.mision-custom-gradient::before,
+.mision-custom-gradient::after,
+.vision-custom-gradient::after {
   content: "";
   @apply absolute bottom-0 left-0 h-full w-full;
+}
+
+.welcome-custom-gradient::after {
   background: linear-gradient(180deg, rgba(15,15,14,1) 0%, rgba(15,15,14,0.5) 25%, rgba(0, 157, 61,0.5) 75%, rgba(0, 157, 61,0.4) 85%, rgba(15,15,14,1) 100%);
 }
 
+.mision-custom-gradient::before {
+  background: linear-gradient(0deg, rgba(15,15,14,1) 0%, rgba(15,15,14,0.5) 15%, rgba(15,15,14,0.5) 85%, rgba(15,15,14,1) 100%);
+}
+
+.mision-custom-gradient::after {
+  background: linear-gradient(90deg, rgba(15,15,14,1) 0%, rgba(15,15,14,1) 40%, rgba(15,15,14,0.9) 65%, rgba(15,15,14,0.6) 75%, rgba(15,15,14,0.5) 100%);
+}
+
+.vision-custom-gradient::after {
+  background: linear-gradient(270deg, rgba(15,15,14,1) 0%, rgba(15,15,14,1) 40%, rgba(15,15,14,0.9) 65%, rgba(15,15,14,0.8) 75%, rgba(15,15,14,0.75) 100%);
+}
+
 .transform-custom-gradient::after {
-  content: "";
-  @apply absolute bottom-0 left-0 h-full w-full;
   background: linear-gradient(180deg, rgba(15,15,14,1) 0%, rgba(15,15,14,0.75) 25%, rgba(15,15,14,0.75) 50%, rgba(15,15,14,0.75) 75%, rgba(15,15,14,1) 100%);
 }
 
 .custom-gradient::after {
-  content: "";
-  @apply absolute bottom-0 left-0 h-full w-full;
   background: linear-gradient(180deg, rgba(2, 0, 36, 0) 0%, rgba(15, 15, 14, 0.485) 60%, rgb(15, 15, 14) 100%);
 }
 

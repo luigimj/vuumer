@@ -11,6 +11,7 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.9",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
