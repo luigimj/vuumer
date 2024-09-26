@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, EffectCoverflow, Thumbs } from 'swiper/modules';
+import { Autoplay, EffectCoverflow, Navigation, Thumbs } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -7,13 +7,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-coverflow';
 
 const sliderWelcome = new Swiper('#slider-welcome', {
-  modules: [EffectCoverflow],
+  modules: [Autoplay, EffectCoverflow],
   initialSlide: 1,
 	slidesPerView: 1,
 	effect: 'coverflow',
 	grabCursor: true,
 	centeredSlides: true,
 	spaceBetween: -100,
+  autoplay: {
+    delay: 1000,
+    disableOnInteraction: false,
+  },
 	coverflowEffect: {
 		rotate: 0,
 		stretch: 0,
