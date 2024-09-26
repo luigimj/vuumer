@@ -127,11 +127,13 @@
   <section class="relative pb-14 pt-40 lg:pt-48">
     <div class="absolute top-0 left-0 w-full h-[75%] -z-10 welcome-custom-gradient">
       <picture>
-        <source data-srcset="/images/welcome/bg-desktop.webp" type="image/webp" media="(min-width: 768px)">
-        <source data-srcset="/images/welcome/bg-desktop.jpg" type="image/jpg" media="(min-width: 768px)">
-        <source data-srcset="/images/welcome/bg-mobile.webp" type="image/webp">
+        <source data-srcset="/images/welcome/bg-desktop.webp 1673w" type="image/webp" media="(min-width: 768px)">
+        <source data-srcset="/images/welcome/bg-desktop.jpg 1673w" type="image/jpg" media="(min-width: 768px)">
+        <source data-srcset="/images/welcome/bg-mobile.webp 430w" type="image/webp">
         <img class="js-lazy w-full h-full object-cover object-[center_top]" 
-          data-src="/images/welcome/bg-mobile.jpg" alt="" loading="lazy" />
+          data-src="/images/welcome/bg-mobile.jpg 430w" alt="" loading="lazy" width="430" height="540" 
+          srcset="/images/welcome/bg-mobile.jpg 430w"
+          sizes="(min-width: 768px) 1673w, 100vw" fetchpriority="high" decoding="async" />
       </picture>
     </div>
     <div class="mx-auto max-w-[800px] px-4 text-center text-white mb-11 lg:mb-28">
@@ -160,26 +162,32 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <picture>
-            <source srcset="/images/welcome/dashboard-desktop.webp" type="image/webp" media="(min-width: 1024px)">
-            <source srcset="/images/welcome/dashboard-desktop.png" type="image/png" media="(min-width: 1024px)">
-            <source srcset="/images/welcome/dashboard-mobile.webp" type="image/webp">
-            <img src="/images/welcome/dashboard-mobile.png" alt="" loading="lazy" />
+            <source srcset="/images/welcome/dashboard-desktop.webp 900w" type="image/webp" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-desktop.png 900w" type="image/png" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-mobile.webp 640w" type="image/webp">
+            <img src="/images/welcome/dashboard-mobile.png" alt="" loading="lazy" width="640" height="395"
+              srcset="/images/welcome/dashboard-mobile.png 640w"
+              sizes="(min-width: 1024px) 900px, 100vw" fetchpriority="high" decoding="async" />
           </picture>
         </div>
         <div class="swiper-slide">
           <picture>
-            <source srcset="/images/welcome/dashboard-desktop.webp" type="image/webp" media="(min-width: 1024px)">
-            <source srcset="/images/welcome/dashboard-desktop.png" type="image/png" media="(min-width: 1024px)">
-            <source srcset="/images/welcome/dashboard-mobile.webp" type="image/webp">
-            <img src="/images/welcome/dashboard-mobile.png" alt="" loading="lazy" />
+            <source srcset="/images/welcome/dashboard-desktop.webp 900w" type="image/webp" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-desktop.png 900w" type="image/png" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-mobile.webp 640w" type="image/webp">
+            <img src="/images/welcome/dashboard-mobile.png" alt="" loading="lazy" width="640" height="395"
+              srcset="/images/welcome/dashboard-mobile.png 640w"
+              sizes="(min-width: 1024px) 900px, 100vw" fetchpriority="high" decoding="async" />
           </picture>
         </div>
         <div class="swiper-slide">
           <picture>
-            <source srcset="/images/welcome/dashboard-desktop.webp" type="image/webp" media="(min-width: 1024px)">
-            <source srcset="/images/welcome/dashboard-desktop.png" type="image/png" media="(min-width: 1024px)">
-            <source srcset="/images/welcome/dashboard-mobile.webp" type="image/webp">
-            <img src="/images/welcome/dashboard-mobile.png" alt="" loading="lazy" />
+            <source srcset="/images/welcome/dashboard-desktop.webp 900w" type="image/webp" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-desktop.png 900w" type="image/png" media="(min-width: 1024px)">
+            <source srcset="/images/welcome/dashboard-mobile.webp 640w" type="image/webp">
+            <img src="/images/welcome/dashboard-mobile.png" alt="" loading="lazy" width="640" height="395"
+              srcset="/images/welcome/dashboard-mobile.png 640w"
+              sizes="(min-width: 1024px) 900px, 100vw" fetchpriority="high" decoding="async" />
           </picture>
         </div>
       </div>
