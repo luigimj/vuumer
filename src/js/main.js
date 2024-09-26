@@ -15,7 +15,7 @@ const sliderWelcome = new Swiper('#slider-welcome', {
 	centeredSlides: true,
 	spaceBetween: -100,
   autoplay: {
-    delay: 1000,
+    delay: 5000,
     disableOnInteraction: false,
   },
 	coverflowEffect: {
