@@ -90,12 +90,16 @@
 }
 
 .slider-mentors .swiper-button-prev, 
-.slider-mentors .swiper-button-next {
+.slider-mentors .swiper-button-next,
+.slider-testimonials .swiper-button-prev,
+.slider-testimonials .swiper-button-next {
   color: #fff;
 }
 
 .slider-mentors .swiper-button-prev::after, 
-.slider-mentors .swiper-button-next::after {
+.slider-mentors .swiper-button-next::after,
+.slider-testimonials .swiper-button-prev::after,
+.slider-testimonials .swiper-button-next::after {
   content: none;
 }
 

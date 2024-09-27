@@ -143,6 +143,37 @@ const initSliders = () => {
       swiper: sliderMentorsThumbnail,
     },
   });
+
+  let sliderTestimonials = null; // Mantén una referencia al swiper
+
+  const initSwiperOnMobile = () => {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 768 && !sliderTestimonials) {
+      // Inicializa Swiper solo si está en pantalla móvil y no se ha inicializado antes
+      sliderTestimonials = new Swiper('#slider-testimonials', {
+        modules: [Navigation],
+        slidesPerView: 1,
+        spaceBetween: 10,
+        effect: 'fade',
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    } else if (screenWidth > 768 && sliderTestimonials) {
+      // Destruye el swiper si la pantalla ya no es móvil
+      sliderTestimonials.destroy(true, true);
+      sliderTestimonials = null;
+    }
+  }
+
+  // Inicializa Swiper al cargar la página y en cada resize
+  initSwiperOnMobile();
+  
+  window.addEventListener('resize', () => {
+    initSwiperOnMobile();
+  });
 };
 
 const initMobileMenu = () => {

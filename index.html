@@ -28,7 +28,7 @@
 
 <body class="bg-custom">
   <header
-    class="shadow-custom fixed left-4 right-4 top-[27px] z-50 mx-auto flex max-w-[1208px] items-center justify-between rounded-[57px] bg-white px-[25px] py-4 lg:top-[14px] lg:px-[47px]">
+    class="shadow-custom fixed left-4 right-4 top-[27px] z-50 mx-auto flex max-w-[1208px] items-center justify-between rounded-[57px] bg-white px-[25px] py-2 md:py-4 lg:top-[14px] lg:px-[47px]">
     <!-- Logo -->
     <div class="flex-shrink-0">
       <!-- Logo for desktop -->
@@ -853,118 +853,150 @@
         Testimonios
       </h2>
 
-      <article class="relative mb-6 lg:mb-0 xl:mb-[23px] rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
-        <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-4 py-5 lg:px-[47px] lg:py-8 lg:grid lg:grid-cols-2 lg:gap-x-14 xl:grid-cols-[auto_auto]">
-          <picture>
-            <source data-srcset="/images/testimonials/1-desktop.webp 455w" type="image/webp" media="(min-width: 768px)">
-            <source data-srcset="/images/testimonials/1-desktop.png 455w" type="image/png" media="(min-width: 768px)">
-            <source data-srcset="/images/testimonials/1-mobile.webp 366w" type="image/webp">
-            <img class="js-lazy w-full mb-5 rounded-[20px] lg:mb-0 xl:h-[394px] xl:w-auto xl:max-w-[455px]" 
-              data-src="/images/testimonials/1-mobile.png" alt="" loading="lazy" width="366" height="212"
-              srcset="/images/welcome/dashboard-mobile.png 366w"
-              sizes="(min-width: 1024px) 455w, 100vw"/>
-          </picture>
-          
-          <div class="xl:pt-[38px]">
-            <blockquote class="mb-8">
-              <p class="text-center text-[15px] font-normal leading-[25px] text-white lg:text-left xl:mb-[78px] xl:text-lg xl:leading-[29px]">
-                Lo que más me impactó fue aprender cómo crear y gestionar una
-                tienda online desde cero. Hoy, no solo comprendo las estrategias
-                de marketing digital, sino que también tengo las herramientas para
-                implementar un ecommerce que genere ingresos reales. Estoy
-                convencida de que este conocimiento me ha abierto muchas puertas,
-                y estoy emocionada por lo que vendrá.
-              </p>
-            </blockquote>
-            
-            <footer>
-              <p class="text-right text-[15px] font-semibold leading-[25px] text-white lg:text-left xl:text-[25px] xl:leading-[70px]">
-                <strong class="font-semibold">Ana Torres</strong> - Empresaria
-              </p>
-            </footer>
+      <div class="slider-testimonials swiper" id="slider-testimonials">
+        <div class="swiper-wrapper lg:!grid grid-cols-3 lg:gap-x-4 lg:gap-y-6 ">
+
+          <div class="swiper-slide col-span-3">
+            <article class="relative rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
+              <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-[28px] py-14 lg:px-[47px] lg:py-8 lg:grid lg:grid-cols-2 lg:gap-x-14 xl:grid-cols-[auto_auto]">
+                <picture class="hidden lg:block">
+                  <source data-srcset="/images/testimonials/1-desktop.webp 455w" type="image/webp" media="(min-width: 768px)">
+                  <source data-srcset="/images/testimonials/1-desktop.png 455w" type="image/png" media="(min-width: 768px)">
+                  <source data-srcset="/images/testimonials/1-mobile.webp 366w" type="image/webp">
+                  <img class="js-lazy w-full mb-5 rounded-[20px] lg:mb-0 xl:h-[394px] xl:w-auto xl:max-w-[455px]" 
+                    data-src="/images/testimonials/1-mobile.png" alt="" loading="lazy" width="366" height="212"
+                    srcset="/images/welcome/dashboard-mobile.png 366w"
+                    sizes="(min-width: 1024px) 455w, 100vw"/>
+                </picture>
+                
+                <div class="xl:pt-[38px]">
+                  <blockquote class="mb-8">
+                    <p class="text-left text-base font-normal leading-[25px] text-white xl:mb-[78px] xl:text-lg xl:leading-[29px]">
+                      Lo que más me impactó fue aprender cómo crear y gestionar una
+                      tienda online desde cero. Hoy, no solo comprendo las estrategias
+                      de marketing digital, sino que también tengo las herramientas para
+                      implementar un ecommerce que genere ingresos reales. Estoy
+                      convencida de que este conocimiento me ha abierto muchas puertas,
+                      y estoy emocionada por lo que vendrá.
+                    </p>
+                  </blockquote>
+                  
+                  <footer class="grid grid-cols-[78px_auto] gap-x-6 items-center lg:block">
+                    <picture class="lg:hidden">
+                      <source data-srcset="/images/testimonials/3.webp" type="image/webp">
+                      <img class="js-lazy rounded-full" 
+                        data-src="/images/testimonials/3.png" alt="" loading="lazy" 
+                        width="78" height="78" />
+                    </picture>
+                    <p class="text-left text-xl font-semibold leading-[30px] text-white xl:text-[25px] xl:leading-[70px]">
+                      <strong class="font-semibold">Ana Torres</strong><span class="hidden lg:inline-block"> - Empresaria</span>
+                    </p>
+                  </footer>
+                </div>
+              </div>
+            </article>
           </div>
+
+          <div class="swiper-slide">
+            <article class="relative rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
+              <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-[28px] py-14 text-left text-white">
+    
+                <blockquote class="mb-8">
+                  <p class="text-base font-normal leading-[29px]">
+                    La Academia Vumeer sin duda es otra cosa. Conocí muchas academias 
+                    pero la mejor es Vumeer, rapidamente aprendí a escalar mis ventas, 
+                    recomendado 100%.
+                  </p>
+                </blockquote>
+    
+                <footer class="grid grid-cols-[78px_auto] gap-x-6 items-center">
+                  <picture>
+                    <source data-srcset="/images/testimonials/2.webp" type="image/webp">
+                    <img class="js-lazy rounded-full" 
+                      data-src="/images/testimonials/2.png" alt="" loading="lazy" 
+                      width="78" height="78" />
+                  </picture>
+                  <p class="text-xl leading-[30px] font-semibold">
+                    <strong class="font-semibold">Miguel Hidalgo</strong>
+                  </p>
+                </footer>
+    
+              </div>
+            </article>
+          </div>
+
+          <div class="swiper-slide">
+            <article class="relative rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
+              <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-[28px] py-14 text-left text-white">
+    
+                <blockquote class="mb-8">
+                  <p class="text-base font-normal leading-[29px]">
+                    Aprendí a testear productos con poco presupuesto y al cuarto 
+                    día empecé a incrementar mis ventas de una manera increíble. 
+                    ¡Recomiendo la Academia Vumeer!
+                  </p>
+                </blockquote>
+    
+                <footer class="grid grid-cols-[78px_auto] gap-x-6 items-center">
+                  <picture>
+                    <source data-srcset="/images/testimonials/3.webp" type="image/webp">
+                    <img class="js-lazy rounded-full" 
+                      data-src="/images/testimonials/3.png" alt="" loading="lazy" 
+                      width="78" height="78" />
+                  </picture>
+                  <p class="text-xl leading-[30px] font-semibold">
+                    <strong class="font-semibold">Valeria Velazques</strong>
+                  </p>
+                </footer>
+    
+              </div>
+            </article>
+          </div>
+
+          <div class="swiper-slide">
+            <article class="relative rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
+              <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-[28px] py-14 text-left text-white">
+    
+                <blockquote class="mb-8">
+                  <p class="text-base font-normal leading-[29px]">
+                    Muy bueno el contenido, hay videos que duran pocos minutos y es 
+                    fácil de entender. Las estrategias para escalar ventas es muy 
+                    bueno, 100% recomendado la Academia Vumeer.
+                  </p>
+                </blockquote>
+    
+                <footer class="grid grid-cols-[78px_auto] gap-x-6 items-center">
+                  <picture>
+                    <source data-srcset="/images/testimonials/4.webp" type="image/webp">
+                    <img class="js-lazy rounded-full" 
+                      data-src="/images/testimonials/4.png" alt="" loading="lazy" 
+                      width="78" height="78" />
+                  </picture>
+                  <p class="text-xl leading-[30px] font-semibold">
+                    <strong class="font-semibold">Luis Gonzales</strong>
+                  </p>
+                </footer>
+    
+              </div>
+            </article>
+          </div>
+
         </div>
-      </article>
 
-      <div class="hidden xl:grid xl:grid-cols-3 xl:gap-4">
-        <article class="relative rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
-          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-[28px] py-14 text-left text-white">
-
-            <blockquote class="mb-8">
-              <p class="text-base font-normal leading-[29px]">
-                La Academia Vumeer sin duda es otra cosa. Conocí muchas academias 
-                pero la mejor es Vumeer, rapidamente aprendí a escalar mis ventas, 
-                recomendado 100%.
-              </p>
-            </blockquote>
-
-            <footer class="grid grid-cols-[78px_auto] gap-x-6 items-center">
-              <picture>
-                <source data-srcset="/images/testimonials/2.webp" type="image/webp">
-                <img class="js-lazy rounded-full" 
-                  data-src="/images/testimonials/2.png" alt="" loading="lazy" 
-                  width="78" height="78" />
-              </picture>
-              <p class="text-xl leading-[30px] font-semibold">
-                <strong class="font-semibold">Miguel Hidalgo</strong>
-              </p>
-            </footer>
-
-          </div>
-        </article>
-
-        <article class="relative rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
-          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-[28px] py-14 text-left text-white">
-
-            <blockquote class="mb-8">
-              <p class="text-base font-normal leading-[29px]">
-                Aprendí a testear productos con poco presupuesto y al cuarto 
-                día empecé a incrementar mis ventas de una manera increíble. 
-                ¡Recomiendo la Academia Vumeer!
-              </p>
-            </blockquote>
-
-            <footer class="grid grid-cols-[78px_auto] gap-x-6 items-center">
-              <picture>
-                <source data-srcset="/images/testimonials/3.webp" type="image/webp">
-                <img class="js-lazy rounded-full" 
-                  data-src="/images/testimonials/3.png" alt="" loading="lazy" 
-                  width="78" height="78" />
-              </picture>
-              <p class="text-xl leading-[30px] font-semibold">
-                <strong class="font-semibold">Valeria Velazques</strong>
-              </p>
-            </footer>
-
-          </div>
-        </article>
-
-        <article class="relative rounded-[20px] bg-gradient-to-r from-[rgba(0,157,61,0.2)] to-[rgba(255,255,255,0)] p-0.5">
-          <div class="rounded-[20px] bg-gradient-to-r from-[rgba(36,49,52,1)] to-[rgba(18,22,24,1)] px-[28px] py-14 text-left text-white">
-
-            <blockquote class="mb-8">
-              <p class="text-base font-normal leading-[29px]">
-                Muy bueno el contenido, hay videos que duran pocos minutos y es 
-                fácil de entender. Las estrategias para escalar ventas es muy 
-                bueno, 100% recomendado la Academia Vumeer.
-              </p>
-            </blockquote>
-
-            <footer class="grid grid-cols-[78px_auto] gap-x-6 items-center">
-              <picture>
-                <source data-srcset="/images/testimonials/4.webp" type="image/webp">
-                <img class="js-lazy rounded-full" 
-                  data-src="/images/testimonials/4.png" alt="" loading="lazy" 
-                  width="78" height="78" />
-              </picture>
-              <p class="text-xl leading-[30px] font-semibold">
-                <strong class="font-semibold">Luis Gonzales</strong>
-              </p>
-            </footer>
-
-          </div>
-        </article>
+        <div class="swiper-button-prev lg:!hidden">
+          <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+            <path d="M20.5 3L33 15.6316M33 15.6316L20.5 28.2632M33 15.6316L3 15.6316" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="swiper-button-next lg:!hidden">
+          <svg width="36" height="31" viewBox="0 0 36 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.5 3L33 15.6316M33 15.6316L20.5 28.2632M33 15.6316L3 15.6316" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
       </div>
+
+      <!-- <div class="xl:grid xl:grid-cols-3 xl:gap-4"> -->
+      <!-- </div> -->
     </div>
   </section>
 
@@ -1121,13 +1153,13 @@
             Vumeer
           </li>
           <li class="text-xs leading-5 text-white xl:text-lg xl:leading-7">
-            <a href="condiciones-de-servicio.html">Términos y condiciones</a>
+            <a href="/condiciones-de-servicio.html">Términos y condiciones</a>
           </li>
           <li class="text-xs leading-5 text-white xl:text-lg xl:leading-7">
-            <a href="politica-de-reembolso.html">Política de reembolso</a>
+            <a href="/politica-de-reembolso.html">Política de reembolso</a>
           </li>
           <li class="text-xs leading-5 text-white xl:text-lg xl:leading-7">
-            <a href="politicas-de-privacidad.html">Políticas de privacidad</a>
+            <a href="/politicas-de-privacidad.html">Políticas de privacidad</a>
           </li>
         </ul>
         
