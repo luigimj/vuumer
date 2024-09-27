@@ -13,7 +13,7 @@ export default defineConfig({
         contacto: "contacto.html",
         "condiciones-de-servicio": "condiciones-de-servicio.html",
         "politica-de-reembolso": "politica-de-reembolso.html",
-        "politica-de-privacidad": "politica-de-privacidad.html",
+        "politicas-de-privacidad": "politicas-de-privacidad.html",
       },
     },
   },
